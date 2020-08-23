@@ -20,8 +20,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>UIFontIcons.ttf</string>
+		<string>Montserrat-Bold.ttf</string>
+		<string>Montserrat-Medium.ttf</string>
+		<string>Montserrat-Regular.ttf</string>
+		<string>Montserrat-SemiBold.ttf</string>
+	</array>
+    <key>UIAppFonts</key>
+    <array>
+        
+    </array>
+
 	<key>MinimumOSVersion</key>
-	<string>9.0</string>
+	<string>11.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>CocktailApp</string>
 	<key>CFBundleIdentifier</key>
@@ -50,5 +63,7 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>CocktailApp</string>
+	<key>XSAppIconAssets</key>
+	<string>Media.xcassets/AppIcons.appiconset</string>
 </dict>
 </plist>

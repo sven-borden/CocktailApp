@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +9,11 @@ namespace CocktailApp
 {
     public partial class App : Application
     {
+        public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjkxMTE5QDMxMzgyZTMyMmUzMGhZSkwvVDJBM1Fzbk5UeUU2OCtTL2hIRWJIV0I0TSt4MkdGSjYzcW8wQlU9");
+
             InitializeComponent();
 
             MainPage = new CocktailApp.MainPage();

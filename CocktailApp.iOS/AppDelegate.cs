@@ -1,3 +1,11 @@
+using Syncfusion.XForms.iOS.ComboBox;
+using Syncfusion.SfMaps.XForms.iOS;
+using Syncfusion.SfCalendar.XForms.iOS;
+using Syncfusion.SfRotator.XForms.iOS;
+using Syncfusion.SfRating.XForms.iOS;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.Border;
+using Syncfusion.XForms.iOS.ParallaxView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,101 +13,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-using Syncfusion.XForms.iOS.SignaturePad;
-
-using Syncfusion.SfChart.XForms.iOS.Renderers;
-
-using Syncfusion.SfSunburstChart.XForms.iOS;
-
-using Syncfusion.SfImageEditor.XForms.iOS;
-
-using Syncfusion.SfDataGrid.XForms.iOS;
-
-using Syncfusion.SfPicker.XForms.iOS;
-
-using Syncfusion.SfPdfViewer.XForms.iOS; 
-
-using Syncfusion.SfRangeSlider.XForms.iOS; 
-
-using Syncfusion.SfSchedule.XForms.iOS;
-
-using Syncfusion.SfGauge.XForms.iOS;
-
-using Syncfusion.XForms.iOS.ProgressBar; 
-
-using Syncfusion.SfCalendar.XForms.iOS;
-
-using Syncfusion.SfCarousel.XForms.iOS;
-
-using Syncfusion.SfRotator.XForms.iOS;
-
-using Syncfusion.SfAutoComplete.XForms.iOS;
-
-using Syncfusion.SfBusyIndicator.XForms.iOS;
-
-using Syncfusion.SfNavigationDrawer.XForms.iOS;
-
-using Syncfusion.SfNumericTextBox.XForms.iOS;
-
-using Syncfusion.SfNumericUpDown.XForms.iOS;
-
-using Syncfusion.SfRadialMenu.XForms.iOS;
-
-using Syncfusion.SfRating.XForms.iOS;
-
-using Syncfusion.SfMaps.XForms.iOS;
-
-using Syncfusion.SfTreeMap.XForms.iOS;
-
-using Syncfusion.SfPullToRefresh.XForms.iOS;
-
-using Syncfusion.ListView.XForms.iOS;
-
-using Syncfusion.RangeNavigator.XForms.iOS;
-
-using Syncfusion.SfSparkline.XForms.iOS;
-
-using Syncfusion.SfBarcode.XForms.iOS;
-
-using Syncfusion.XForms.iOS.DataForm;
-
-using Syncfusion.XForms.iOS.MaskedEdit;
-
-using Syncfusion.SfDiagram.XForms.iOS;
-
-using Syncfusion.XForms.iOS.TabView;
-
 using Syncfusion.XForms.iOS.Buttons;
-
-using Syncfusion.XForms.iOS.ComboBox;
-
-using Syncfusion.XForms.iOS.TextInputLayout;
-
-using Syncfusion.XForms.iOS.TreeView;
-
-using Syncfusion.XForms.iOS.Border;
-
-using Syncfusion.XForms.iOS.ParallaxView;
-
-using Syncfusion.XForms.iOS.BadgeView;
-
-using Syncfusion.XForms.iOS.Expander;
-
-using Syncfusion.XForms.iOS.Cards;
-
-using Syncfusion.XForms.iOS.Accordion;
-
-using Syncfusion.XForms.iOS.RichTextEditor;
-
-using Syncfusion.XForms.iOS.EffectsView;
-
-using Syncfusion.XForms.iOS.Shimmer;
-
-using Syncfusion.XForms.iOS.Core;
-
-using Syncfusion.XForms.Pickers.iOS;
-
-using Syncfusion.XForms.iOS.Chat;
 
 namespace CocktailApp.iOS
 {
@@ -119,176 +33,16 @@ namespace CocktailApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SfComboBoxRenderer.Init();
+            SfMapsRenderer.Init();
+            SfCalendarRenderer.Init();
+            SfRotatorRenderer.Init();
+            SfRatingRenderer.Init();
+            SfBorderRenderer.Init();
+            SfListViewRenderer.Init();
+            SfParallaxViewRenderer.Init();
             
-			SfSignaturePadRenderer.Init();
-			
-			
-			SfChartRenderer.Init();
-			
-			
-			SfSunburstChartRenderer.Init();
-			
-			
-			SfImageEditorRenderer.Init();
-			
-			
-			SfDataGridRenderer.Init();
-			
-			
-			SfPickerRenderer.Init();
-			
-			
-			SfPdfDocumentViewRenderer.Init(); 
-			
-			
-			SfRangeSliderRenderer.Init(); 
-			
-			
-			SfScheduleRenderer.Init();
-			
-			
-			SfGaugeRenderer.Init();
-			
-			
-			SfDigitalGaugeRenderer.Init();
-			
-			
-			SfLinearGaugeRenderer.Init();
-			
-			
-			SfLinearProgressBarRenderer.Init(); 
-			
-			
-			SfCircularProgressBarRenderer.Init(); 
-			
-			
-			SfCalendarRenderer.Init();
-			
-			
-			SfCarouselRenderer.Init();
-			
-			
-			SfRotatorRenderer.Init();
-			
-			
-			SfAutoCompleteRenderer.Init();
-			
-			
-			SfBusyIndicatorRenderer.Init();
-			
-			
-			SfNavigationDrawerRenderer.Init();
-			
-			
-			SfNumericTextBoxRenderer.Init();
-			
-			
-			SfNumericUpDownRenderer.Init();
-			
-			
-			SfRadialMenuRenderer.Init();
-			
-			
-			SfRatingRenderer.Init();
-			
-			
-			SfMapsRenderer.Init();
-			
-			
-			SfTreeMapRenderer.Init();
-			
-			
-			SfPullToRefreshRenderer.Init();
-			
-			
-			SfListViewRenderer.Init();
-			
-			
-			SfRangeNavigatorRenderer.Init();
-			
-			
-			SfSparklineRenderer.Init();
-			
-			
-			SfBarcodeRenderer.Init();
-			
-			
-			SfDataFormRenderer.Init();
-			
-			
-			SfMaskedEditRenderer.Init();
-			
-			
-			SfDiagramRenderer.Init();
-			
-			
-			SfTabViewRenderer.Init();
-			
-			
-			SfCheckBoxRenderer.Init();
-			
-			
-			SfRadioButtonRenderer.Init();
-			
-			
-			SfSegmentedControlRenderer.Init();
-			
-			
-			SfComboBoxRenderer.Init();
-			
-			
-			SfTextInputLayoutRenderer.Init();
-			
-			
-			SfTreeViewRenderer.Init();
-			
-			
 			SfButtonRenderer.Init();
-			
-			
-			SfBorderRenderer.Init();
-			
-			
-			SfParallaxViewRenderer.Init();
-			
-			
-			SfBadgeViewRenderer.Init();
-			
-			
-			SfExpanderRenderer.Init();
-			
-			
-			SfCardViewRenderer.Init();
-			
-			
-			SfCardLayoutRenderer.Init();
-			
-			
-			SfAccordionRenderer.Init();
-			
-			
-			SfSwitchRenderer.Init();
-			
-			
-			SfRichTextEditorRenderer.Init();
-			
-			
-			SfEffectsViewRenderer.Init();
-			
-			
-			SfShimmerRenderer.Init();
-			
-			
-			SfAvatarViewRenderer.Init();
-			
-			
-			SfTimePickerRenderer.Init();
-			
-			
-			SfDatePickerRenderer.Init();
-			
-			
-			SfChatRenderer.Init();
 			
 			LoadApplication(new App());
 
