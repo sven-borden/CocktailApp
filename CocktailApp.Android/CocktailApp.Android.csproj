@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01E15744-00F8-47D0-B74F-9F929C6F3551}</ProjectGuid>
+    <ProjectGuid>{17E17954-6286-4E66-BB0C-43BFEC3AB53D}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>CocktailApp.Android</RootNamespace>
     <AssemblyName>CocktailApp.Android</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -54,10 +54,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\UIFontIcons.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-Bold.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-Medium.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-Regular.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-SemiBold.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
@@ -71,71 +77,32 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfCalendar">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfMaps">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfParallaxView">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfRating">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator">
+      <Version>18.2.0.44</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTreeView" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTreeMap" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfSunburstChart" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfSparkline" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfSignaturePad" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRating" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfParallaxView" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNavigationDrawer" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaps" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfImageEditor" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Expander " Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfDiagram" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfDataForm" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChat" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfCarousel" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBarcode" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="18.2.0.44" />
-    <PackageReference Include="Syncfusion.Xamarin.Expander " Version="18.2.0.44" />
-    <PackageReference Include="Xamarin.Android.Support.v17.Leanback" Version="28.0.0.1" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -144,5 +111,23 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-land-xhdpi\" />
+    <Folder Include="Resources\drawable-land-xxhdpi\" />
+    <Folder Include="Resources\drawable-land-xxxhdpi\" />
+    <Folder Include="Resources\drawable-land\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\OurTeam.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadXFormsNugetUpgradeInfoBarCocktailAppAndroidHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

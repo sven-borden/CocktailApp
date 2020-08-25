@@ -7,6 +7,6 @@ namespace CocktailApp.Models
     public class Ingredient
     {
         public string Name { get; set; }
-        public double Quantity { get; set; } //in OZ
+        public double Quantity { get; set; }
     }
 }

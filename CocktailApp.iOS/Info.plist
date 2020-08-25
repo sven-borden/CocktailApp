@@ -20,10 +20,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array/>
 	<key>MinimumOSVersion</key>
-	<string>9.0</string>
+	<string>11.3</string>
 	<key>CFBundleDisplayName</key>
-	<string>CocktailApp</string>
+	<string>Borden Cocktails</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.Syncfusion.CocktailApp</string>
 	<key>CFBundleVersion</key>
@@ -50,5 +52,7 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>CocktailApp</string>
+	<key>XSAppIconAssets</key>
+	<string>Media.xcassets/MainAppIcons.appiconset</string>
 </dict>
 </plist>

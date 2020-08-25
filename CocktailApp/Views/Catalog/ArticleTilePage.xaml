@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CocktailApp.Views.Catalog.ArticleTilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:controls="clr-namespace:CocktailApp.Controls"
+    xmlns:converter="clr-namespace:CocktailApp.Converters"
+    xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+    xmlns:template="clr-namespace:CocktailApp.Views.Templates"
+    xmlns:viewModel="clr-namespace:CocktailApp.ViewModels.Catalog"
+    x:Name="articleTilePage"
+    BackgroundColor="{DynamicResource Gray-White}"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <converter:BooleanToStringConverter x:Key="BoolToStringConverter" />
+            <converter:ImageSourceConverter x:Key="ImageSourceConverter"/>
+
+            <DataTemplate x:Key="HorizontalArticleView">
+                <template:ArticleTileTemplate ParentBindingContext="{Binding Path=BindingContext, Source={x:Reference articleTilePage}}" />
+            </DataTemplate>
+
+            <DataTemplate x:Key="HeaderView">
+                <StackLayout Spacing="8">
+                    <!--  Label for featured stories  -->
+                    <Label
+                        Margin="0,8"
+                        FontFamily="{StaticResource Montserrat-SemiBold}"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        Text="FEATURED COCKTAILS"
+                        TextColor="{DynamicResource Gray-800}" />
+
+                    <!--  Rotator view  -->
+                    <rotator:SfRotator
+                        x:Name="Rotator"
+                        BackgroundColor="#FFFFFF}"
+                        DotPlacement="Default"
+                        DotsBorderColor="Transparent"
+                        EnableLooping="False"
+                        HeightRequest="210"
+                        HorizontalOptions="Center"
+                        ItemsSource="{Binding FeaturedStories}"
+                        NavigationStripMode="Dots"
+                        SelectedDotColor="{DynamicResource PrimaryColor}"
+                        UnselectedDotColor="{DynamicResource Gray-White}"
+                        VerticalOptions="Start">
+                        <rotator:SfRotator.ItemTemplate>
+                            <DataTemplate>
+                                <Grid x:Name="Grid">
+                                    <Image
+                                        Aspect="AspectFill"
+                                        BackgroundColor="{DynamicResource Gray-200}"
+                                        HeightRequest="210"
+                                        Source="{Binding ImagePath, Converter={StaticResource ImageSourceConverter}}" />
+
+                                    <border:SfBorder
+                                        BackgroundColor="{DynamicResource PrimaryColor}"
+                                        BorderWidth="0"
+                                        HorizontalOptions="Start"
+                                        Opacity="0.6"
+                                        VerticalOptions="Center">
+                                        <Label
+                                            Margin="16"
+                                            FontFamily="{StaticResource Montserrat-Bold}"
+                                            FontSize="20"
+                                            LineBreakMode="TailTruncation"
+                                            LineHeight="{OnPlatform Default=-1,
+                                                                    Android=1.25}"
+                                            MaxLines="2"
+                                            Text="{Binding Name}"
+                                            TextColor="{DynamicResource Gray-White}"
+                                            WidthRequest="200" />
+                                    </border:SfBorder>
+
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding BindingContext.FeatureStoriesCommand, Source={x:Reference Rotator}}" CommandParameter="{Binding BindingContext, Source={x:Reference Grid}}" />
+                                    </Grid.GestureRecognizers>
+
+                                </Grid>
+                            </DataTemplate>
+                        </rotator:SfRotator.ItemTemplate>
+                    </rotator:SfRotator>
+
+                    <!--  Label for Latest stories  -->
+                    <Label
+                        Margin="0,16,0,0"
+                        FontFamily="{StaticResource Montserrat-SemiBold}"
+                        FontSize="12"
+                        HorizontalOptions="Start"
+                        Text="LATEST COCKTAILS"
+                        TextColor="{DynamicResource Gray-800}" />
+                </StackLayout>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <viewModel:ArticleListViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  Title View  -->
+            <controls:TitleView
+                Title="Blog"
+                Grid.Row="0"
+                BackgroundColor="{DynamicResource Gray-White}" />
+
+            <!--  List out the items for latest stories  -->
+            <listView:SfListView
+                x:Name="SfListView"
+                Grid.Row="1"
+                Margin="8"
+                AutoFitMode="Height"
+                HeaderTemplate="{StaticResource HeaderView}"
+                HorizontalOptions="FillAndExpand"
+                ItemSpacing="8"
+                ItemTemplate="{StaticResource HorizontalArticleView}"
+                ItemsSource="{Binding LatestStories}"
+                SelectionBackgroundColor="Transparent"
+                TapCommand="{Binding ItemSelectedCommand}"
+                VerticalOptions="FillAndExpand">
+
+                <!--  Layout to customize no. of columns in SfListView  -->
+                <listView:SfListView.LayoutManager>
+                    <listView:GridLayout x:Name="GridLayout" SpanCount="{OnIdiom Phone=2, Tablet=3, Desktop=5}" />
+                </listView:SfListView.LayoutManager>
+
+            </listView:SfListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
