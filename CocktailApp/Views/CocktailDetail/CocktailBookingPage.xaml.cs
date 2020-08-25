@@ -5,13 +5,12 @@ using Xamarin.Forms.Internals;
 namespace CocktailApp.Views.CocktailDetail
 {
     [Preserve(AllMembers = true)]
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RoomBookingPage : ContentPage
+    public partial class CocktailBookingPage : ContentPage
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RoomBookingPage" /> class.
+        /// Initializes a new instance of the <see cref="CocktailBookingPage" /> class.
         /// </summary>
-        public RoomBookingPage()
+        public CocktailBookingPage()
         {
             InitializeComponent();
         }

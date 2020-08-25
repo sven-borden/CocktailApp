@@ -27,11 +27,11 @@ namespace CocktailApp.Converters
                 {
                     if ((bool)value)
                     {
-                        return "\ue72f";
+                        return "\uE735";
                     }
                     else
                     {
-                        return "\ue734";
+                        return "\uE734";
                     }
                 }
                 else if (parameter.ToString() == "1")

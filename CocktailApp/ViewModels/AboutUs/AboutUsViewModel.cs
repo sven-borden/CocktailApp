@@ -31,19 +31,19 @@ namespace CocktailApp.ViewModels.AboutUs
         public AboutUsViewModel()
         {
             this.productDescription =
-                "We want to make the best experience for our friends, blablbala to fill out";
-            this.productIcon = App.BaseImageUrl + "Icon.png";
+                "This application is dedicated to show the many possibilities of drinks at home. Welcome to Borden Cocktails and enjoy a nice evening with friends and drinks. ";
+            this.productIcon = "Logo.png";
             this.productVersion = "1.0";
-            this.cardsTopImage = App.BaseImageUrl + "Mask.png";
+            this.cardsTopImage = "https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/09/30/10/cocktails.jpg?width=1000&height=614&fit=bounds&format=pjpg&auto=webp&quality=70&crop=16:9,offset-y0.5";
 
             this.EmployeeDetails = new ObservableCollection<AboutUsModel>
             {
                 new AboutUsModel
                 {
                     EmployeeName = "Sven Borden",
-                    Image = App.BaseImageUrl + "ProfileImage15.png",
-                    Designation = "Developper"
-                }
+                    Image = "https://pbs.twimg.com/profile_images/941409273892016128/c4NqGdvw_400x400.jpg",
+                    Designation = "Project Manager"
+                },
             };
 
             this.ItemSelectedCommand = new Command(this.ItemSelected);

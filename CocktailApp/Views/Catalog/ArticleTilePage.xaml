@@ -53,7 +53,7 @@
                         ItemsSource="{Binding FeaturedStories}"
                         NavigationStripMode="Dots"
                         SelectedDotColor="{DynamicResource PrimaryColor}"
-                        UnselectedDotColor="{DynamicResource Gray-White}"
+                        UnselectedDotColor="White"
                         VerticalOptions="Start">
                         <rotator:SfRotator.ItemTemplate>
                             <DataTemplate>
@@ -79,7 +79,7 @@
                                                                     Android=1.25}"
                                             MaxLines="2"
                                             Text="{Binding Name}"
-                                            TextColor="{DynamicResource Gray-White}"
+                                            TextColor="White"
                                             WidthRequest="200" />
                                     </border:SfBorder>
 
@@ -120,9 +120,17 @@
 
             <!--  Title View  -->
             <controls:TitleView
-                Title="Blog"
+                Title="Cocktails"
                 Grid.Row="0"
                 BackgroundColor="{DynamicResource Gray-White}" />
+
+            <ImageButton
+                WidthRequest="20"
+                Margin="10"
+                Source="gear.jpg"
+                HeightRequest="20"
+                Clicked="SettingsClicked"
+                HorizontalOptions="Start"/>
 
             <!--  List out the items for latest stories  -->
             <listView:SfListView

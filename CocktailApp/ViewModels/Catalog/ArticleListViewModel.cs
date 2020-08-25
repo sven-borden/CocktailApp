@@ -1,4 +1,5 @@
 ﻿using CocktailApp.Models;
+using CocktailApp.Views.CocktailDetail;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -33,6 +34,10 @@ namespace CocktailApp.ViewModels.Catalog
                 new Cocktail
                 {
                     ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
+                    PreviewImages = new List<string>()
+                    {
+                        "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
+                    },
                     Name = "Espresso Martini",
                     Description = "The famous Espresso Martini is a top drink and a classic Kahlua cocktail. Invented by the famous late bartender Dick Bradsell, as a peculiar request from a British top model in his London bar in 1983. The Espresso Martini is a cocktail with a story, a history and a legacy.",
                     Tag = "Coffee",
@@ -47,15 +52,63 @@ namespace CocktailApp.ViewModels.Catalog
                             new Ingredient(){Name = "Coffee Beans", Quantity = 3}
                         }
                     }
+                },
+                new Cocktail
+                {
+                    ImagePath = "http://www.denied-cocktails.com/wp-content/uploads/2017/08/The-Blue-Train-Cocktail_5_1-668x1024.jpg",
+                    PreviewImages = new List<string>()
+                    {
+                        "http://www.denied-cocktails.com/wp-content/uploads/2017/08/The-Blue-Train-Cocktail_5_1-668x1024.jpg",
+                    },
+                    Name = "Blue Train",
+                    Description = "We were surprised to find that this drink probably predates blue curaçao! Famed bartender Harry Craddock used a “blue vegetable extract” along with Cointreau triple sec to create the effect.",
+                    Tag = "Blue",
+                    Alcohol = 0.3,
+                    Recipe = new Recipe()
+                    {
+                        RecipeList = new List<Ingredient>()
+                        {
+                            new Ingredient(){Name = "Vodka/Gin", Quantity = 1.5},
+                            new Ingredient(){Name = "Triple Sec", Quantity = 0.75},
+                            new Ingredient(){Name = "Blue Curaçao", Quantity = 0.5},
+                            new Ingredient(){Name = "Lemon juice", Quantity = 0.66},
+                            new Ingredient(){Name = "Lemon zest", Quantity = 1}
+                        }
+                    }
                 }
             };
 
             this.LatestStories = new ObservableCollection<Cocktail>
             {
-
+                new Cocktail
+                {
+                    ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/244d2569-6d4f-4b31-acf4-513d6c85113a.jpg?imwidth=750",
+                    PreviewImages = new List<string>()
+                    {
+                        "https://images.absolutdrinks.com/drink-images/Raw/Absolut/244d2569-6d4f-4b31-acf4-513d6c85113a.jpg?imwidth=750",
+                    },
+                    Name = "Classic Martini",
+                    Description = "The martini is a cocktail made with gin or vodka and vermouth, and garnished with an olive or a lemon twist. Over the years, the martini has become one of the best-known mixed alcoholic beverages.",
+                    Tag = "Classic",
+                    Alcohol = 0.3,
+                    Recipe = new Recipe()
+                    {
+                        RecipeList = new List<Ingredient>()
+                        {
+                            new Ingredient(){Name = "Gin/Vodka", Quantity = 1.5},
+                            new Ingredient(){Name = "Dry Vermouth", Quantity = 0.2},
+                            new Ingredient(){Name = "Lemon zest", Quantity = 1},
+                            new Ingredient(){Name = "Green Olive", Quantity = 1}
+                        }
+                    }
+                },
                 new Cocktail
                 {
                     ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/4416545f-9d35-4c12-9f24-8892d668321b.jpg?imwidth=750",
+                    PreviewImages = new List<string>()
+                    {
+                        "https://images.absolutdrinks.com/drink-images/Raw/Absolut/4416545f-9d35-4c12-9f24-8892d668321b.jpg?imwidth=750",
+                    },
                     Name = "French 75",
                     Description = "The drink was created in 1915 at the New York Bar in Paris - later Harry's New York Bar - by barman Harry MacElhone. The combination was said to have such a kick that it felt like being shelled with the powerful French 75mm field gun, also called a 75 Cocktail, or Soixante Quinze in French. The French 75 was popularized in America at the Stork Club in New York.",
                     Tag = "Champagne",
@@ -74,7 +127,34 @@ namespace CocktailApp.ViewModels.Catalog
                 },
                 new Cocktail
                 {
+                    ImagePath = "http://www.denied-cocktails.com/wp-content/uploads/2017/08/The-Blue-Train-Cocktail_5_1-668x1024.jpg",
+                    PreviewImages = new List<string>()
+                    {
+                        "http://www.denied-cocktails.com/wp-content/uploads/2017/08/The-Blue-Train-Cocktail_5_1-668x1024.jpg",
+                    },
+                    Name = "Blue Train",
+                    Description = "We were surprised to find that this drink probably predates blue curaçao! Famed bartender Harry Craddock used a “blue vegetable extract” along with Cointreau triple sec to create the effect.",
+                    Tag = "Blue",
+                    Alcohol = 0.3,
+                    Recipe = new Recipe()
+                    {
+                        RecipeList = new List<Ingredient>()
+                        {
+                            new Ingredient(){Name = "Vodka/Gin", Quantity = 1.5},
+                            new Ingredient(){Name = "Triple Sec", Quantity = 0.75},
+                            new Ingredient(){Name = "Blue Curaçao", Quantity = 0.5},
+                            new Ingredient(){Name = "Lemon juice", Quantity = 0.66},
+                            new Ingredient(){Name = "Lemon zest", Quantity = 1}
+                        }
+                    }
+                },
+                new Cocktail
+                {
                     ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
+                    PreviewImages = new List<string>()
+                    {
+                        "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
+                    },
                     Name = "Espresso Martini",
                     Description = "The famous Espresso Martini is a top drink and a classic Kahlua cocktail. Invented by the famous late bartender Dick Bradsell, as a peculiar request from a British top model in his London bar in 1983. The Espresso Martini is a cocktail with a story, a history and a legacy.",
                     Tag = "Coffee",
@@ -196,18 +276,18 @@ namespace CocktailApp.ViewModels.Catalog
         /// Invoked when the the feature stories item is clicked.
         /// </summary>
         /// <param name="obj">The object</param>
-        private void FeatureStoriesClicked(object obj)
+        private async void FeatureStoriesClicked(object obj)
         {
-            // Do something
+            await Application.Current.MainPage.Navigation.PushAsync(new CocktailBookingPage());
         }
 
         /// <summary>
         /// Invoked when an item is selected.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void ItemSelected(object obj)
+        private async void ItemSelected(object obj)
         {
-            // Do something
+            await Application.Current.MainPage.Navigation.PushAsync(new CocktailBookingPage());
         }
 
         #endregion

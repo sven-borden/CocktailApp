@@ -36,5 +36,10 @@ namespace CocktailApp.Views.Catalog
                     Device.Idiom == TargetIdiom.Phone ? 2 : Device.Idiom == TargetIdiom.Tablet ? 3 : 4;
             }
         }
+
+        private async void SettingsClicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutUs.AboutUsWithCardsPage());
+        }
     }
 }

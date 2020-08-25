@@ -22,6 +22,15 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array/>
+    <key>UIAppFonts</key>
+    <array>
+        <string>UIFontIcons.ttf</string>
+        <string>Montserrat-Bold.ttf</string>
+        <string>Montserrat-Medium.ttf</string>
+        <string>Montserrat-Regular.ttf</string>
+        <string>Montserrat-SemiBold.ttf</string>
+    </array>
+
 	<key>MinimumOSVersion</key>
 	<string>11.3</string>
 	<key>CFBundleDisplayName</key>

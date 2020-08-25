@@ -1,5 +1,6 @@
 ﻿using CocktailApp.ViewModels;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms.Internals;
 
 namespace CocktailApp.Models
@@ -30,6 +31,10 @@ namespace CocktailApp.Models
         /// </summary>
         public string ImagePath { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Cocktail preview images path</summary>
+        public List<string> PreviewImages { get; set; }
+
 
         /// <summary>
         /// Gets or sets the Cocktail name.
@@ -41,6 +46,15 @@ namespace CocktailApp.Models
         /// </summary>
         public string Description { get; set; }
 
+        /// <summary>
+        /// Gets or sets the overall of the cocktail.
+        /// </summary>
+        public double OverallRating { get; set; }
+
+        /// <summary>
+        /// Gets or sets the reviews of the resort.
+        /// </summary>
+        public string TotalReviews { get; set; }
 
         /// <summary>
         /// Gets or sets the Cocktail alcohol percentage

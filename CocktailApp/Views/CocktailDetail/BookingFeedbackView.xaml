@@ -46,7 +46,7 @@
                  Style="{StaticResource BoxViewStyle}"  />
     </StackLayout>
 
-    <StackLayout x:Name="StackLayout" BindableLayout.ItemsSource="{Binding RoomDetail.Reviews}">
+    <StackLayout x:Name="StackLayout" BindableLayout.ItemsSource="{Binding CocktailDetail.Reviews}">
         <BindableLayout.ItemTemplate>
             <DataTemplate>
                 <StackLayout Spacing="0">

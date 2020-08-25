@@ -6,6 +6,7 @@ namespace CocktailApp.Views.Templates
     /// <summary>
     /// Class helps to reduce repetitive markup, and allows an apps appearance to be more easily changed.
     /// </summary>
+    [Preserve(AllMembers = true)]
     public partial class Styles
     {
         /// <summary>

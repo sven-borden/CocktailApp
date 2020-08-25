@@ -9,7 +9,7 @@ namespace CocktailApp.Models.CocktailDetail
     /// Model for room booking page
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class RoomDetail : BaseViewModel
+    public class CocktailDetail : BaseViewModel
     {
         #region Fields
 
