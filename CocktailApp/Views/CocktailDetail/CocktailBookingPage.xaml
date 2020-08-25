@@ -15,7 +15,7 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
              x:Class="CocktailApp.Views.CocktailDetail.CocktailBookingPage"  
-             NavigationPage.HasNavigationBar="False" x:Name="CocktailBooking"
+             NavigationPage.HasNavigationBar="True" x:Name="CocktailBooking"
              BackgroundColor="{StaticResource Gray-White}">
 
     <ContentPage.BindingContext>
@@ -163,14 +163,8 @@
                                     Style="{StaticResource LabelStyle}"
                                     Text="{Binding Cocktail.Description}" />
 
-                                <!--  Resort information title -->
-                                <Label Margin="0" Grid.Row="6"
-                                    FontFamily="{StaticResource Montserrat-SemiBold}"
-                                    Style="{StaticResource LabelStyle}"
-                                    Text="Cocktail Ingredients"
-                                    TextColor="{DynamicResource Gray-900}" />
                                 
-                                <local:BookingFeedbackView/>
+                                <local:BookingFeedbackView Grid.Row="6"/>
 
                             </Grid>
 
