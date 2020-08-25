@@ -1,23 +1,23 @@
 ﻿using CocktailApp.ViewModels;
+using System;
 using Xamarin.Forms.Internals;
 
 namespace CocktailApp.Models
 {
     /// <summary>
-    /// Model for Article templates.
+    /// Model for Cocktail templates.
     /// </summary>
-    [Preserve(AllMembers = true)]
-    public class Article : BaseViewModel
+    public class Cocktail : BaseViewModel
     {
         #region Fields
 
         /// <summary>
-        /// Gets or sets a value indicating whether the article is bookmarked
+        /// Gets or sets a value indicating whether the Cocktail is bookmarked
         /// </summary>
         private bool isBookmarked;
 
         /// <summary>
-        /// Gets or sets a value indicating whether the article is favourite.
+        /// Gets or sets a value indicating whether the Cocktail is favourite.
         /// </summary>
         private bool isFavourite;
 
@@ -26,38 +26,39 @@ namespace CocktailApp.Models
         #region Public Properties
 
         /// <summary>
-        /// Gets or sets the article image path.
+        /// Gets or sets the Cocktail image path.
         /// </summary>
         public string ImagePath { get; set; }
 
+
         /// <summary>
-        /// Gets or sets the article name.
+        /// Gets or sets the Cocktail name.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the article author name.
-        /// </summary>
-        public string Author { get; set; }
-
-
-        /// <summary>
-        /// Gets or sets the article publish date.
-        /// </summary>
-        public string Date { get; set; }
-
-        /// <summary>
-        /// Gets or sets the article read time.
-        /// </summary>
-        public string AverageReadingTime { get; set; }
-
-        /// <summary>
-        /// Gets or sets the article description
+        /// Gets or sets the Cocktail description
         /// </summary>
         public string Description { get; set; }
 
+
         /// <summary>
-        /// Gets or sets a value indicating whether the article is bookmarked.
+        /// Gets or sets the Cocktail alcohol percentage
+        /// </summary>
+        public double Alcohol { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Cocktail tag //e.g. sweet, dry
+        /// </summary>
+        public string Tag { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Cocktail recipe
+        /// </summary>
+        public Recipe Recipe { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the Cocktail is bookmarked.
         /// </summary>
         public bool IsBookmarked
         {
@@ -74,7 +75,7 @@ namespace CocktailApp.Models
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the article is favourite.
+        /// Gets or sets a value indicating whether the Cocktail is favourite.
         /// </summary>
         public bool IsFavourite
         {

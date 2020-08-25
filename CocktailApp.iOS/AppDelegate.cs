@@ -46,7 +46,9 @@ namespace CocktailApp.iOS
 			
 			LoadApplication(new App());
 
-            return base.FinishedLaunching(app, options);
+            var result = base.FinishedLaunching(app, options);
+
+            return result;
         }
     }
 }

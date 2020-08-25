@@ -7,8 +7,6 @@ namespace CocktailApp.Views.Templates
     /// <summary>
     /// Article tile template.
     /// </summary>
-    [Preserve(AllMembers = true)]
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ArticleTileTemplate : Grid
     {
         /// <summary>

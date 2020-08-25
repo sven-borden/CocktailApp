@@ -21,22 +21,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIAppFonts</key>
-	<array>
-		<string>UIFontIcons.ttf</string>
-		<string>Montserrat-Bold.ttf</string>
-		<string>Montserrat-Medium.ttf</string>
-		<string>Montserrat-Regular.ttf</string>
-		<string>Montserrat-SemiBold.ttf</string>
-	</array>
-    <key>UIAppFonts</key>
-    <array>
-        
-    </array>
-
+	<array/>
 	<key>MinimumOSVersion</key>
 	<string>11.3</string>
 	<key>CFBundleDisplayName</key>
-	<string>CocktailApp</string>
+	<string>Borden Cocktails</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.Syncfusion.CocktailApp</string>
 	<key>CFBundleVersion</key>
@@ -64,6 +53,6 @@
 	<key>CFBundleName</key>
 	<string>CocktailApp</string>
 	<key>XSAppIconAssets</key>
-	<string>Media.xcassets/AppIcons.appiconset</string>
+	<string>Media.xcassets/MainAppIcons.appiconset</string>
 </dict>
 </plist>

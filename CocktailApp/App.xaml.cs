@@ -15,8 +15,8 @@ namespace CocktailApp
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjkxMTE5QDMxMzgyZTMyMmUzMGhZSkwvVDJBM1Fzbk5UeUU2OCtTL2hIRWJIV0I0TSt4MkdGSjYzcW8wQlU9");
 
             InitializeComponent();
-
-            MainPage = new CocktailApp.MainPage();
+            
+            MainPage = new NavigationPage(new CocktailApp.Views.Catalog.ArticleTilePage());
         }
 
         protected override void OnStart()

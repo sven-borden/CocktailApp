@@ -13,7 +13,9 @@
     xmlns:viewModel="clr-namespace:CocktailApp.ViewModels.Catalog"
     x:Name="articleTilePage"
     BackgroundColor="{DynamicResource Gray-White}"
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="False"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -22,6 +24,7 @@
             </ResourceDictionary.MergedDictionaries>
 
             <converter:BooleanToStringConverter x:Key="BoolToStringConverter" />
+            <converter:ImageSourceConverter x:Key="ImageSourceConverter"/>
 
             <DataTemplate x:Key="HorizontalArticleView">
                 <template:ArticleTileTemplate ParentBindingContext="{Binding Path=BindingContext, Source={x:Reference articleTilePage}}" />
@@ -35,7 +38,7 @@
                         FontFamily="{StaticResource Montserrat-SemiBold}"
                         FontSize="12"
                         HorizontalOptions="Start"
-                        Text="FEATURED STORIES"
+                        Text="FEATURED COCKTAILS"
                         TextColor="{DynamicResource Gray-800}" />
 
                     <!--  Rotator view  -->
@@ -59,7 +62,7 @@
                                         Aspect="AspectFill"
                                         BackgroundColor="{DynamicResource Gray-200}"
                                         HeightRequest="210"
-                                        Source="{Binding ImagePath}" />
+                                        Source="{Binding ImagePath, Converter={StaticResource ImageSourceConverter}}" />
 
                                     <border:SfBorder
                                         BackgroundColor="{DynamicResource PrimaryColor}"
@@ -95,7 +98,7 @@
                         FontFamily="{StaticResource Montserrat-SemiBold}"
                         FontSize="12"
                         HorizontalOptions="Start"
-                        Text="LATEST STORIES"
+                        Text="LATEST COCKTAILS"
                         TextColor="{DynamicResource Gray-800}" />
                 </StackLayout>
             </DataTemplate>

@@ -7,8 +7,6 @@ namespace CocktailApp.Views.Catalog
     /// <summary>
     /// Page to show the article tile
     /// </summary>
-    [Preserve(AllMembers = true)]
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ArticleTilePage
     {
         /// <summary>

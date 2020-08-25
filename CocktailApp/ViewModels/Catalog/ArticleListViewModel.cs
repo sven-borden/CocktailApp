@@ -1,7 +1,9 @@
-﻿using System.Collections.ObjectModel;
+﻿using CocktailApp.Models;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
-using Model = CocktailApp.Models.Article;
 
 namespace CocktailApp.ViewModels.Catalog
 {
@@ -13,9 +15,9 @@ namespace CocktailApp.ViewModels.Catalog
     {
         #region Fields
 
-        private ObservableCollection<Model> featuredStories;
+        private ObservableCollection<Cocktail> featuredStories;
 
-        private ObservableCollection<Model> latestStories;
+        private ObservableCollection<Cocktail> latestStories;
 
         #endregion
 
@@ -25,84 +27,69 @@ namespace CocktailApp.ViewModels.Catalog
         /// </summary>
         public ArticleListViewModel()
         {
-            this.FeaturedStories = new ObservableCollection<Model>
+            this.FeaturedStories = new ObservableCollection<Cocktail>
             {
-                new Model
+                //espresso martini
+                new Cocktail
                 {
-                    ImagePath = App.BaseImageUrl + "ArticleImage2.png",
-                    Name = "Learning to Reset",
-                    Author = "John Doe",
-                    Date = "Aug 2010",
-                    AverageReadingTime = "5 mins read"
-                },
-                new Model
-                {
-                    ImagePath = App.BaseImageUrl + "ArticleImage3.png",
-                    Name = "Holistic Approach to UI Design",
-                    Author = "John Doe",
-                    Date = "Apr 16",
-                    AverageReadingTime = "5 mins read"
-                },
-                new Model
-                {
-                    ImagePath = App.BaseImageUrl + "ArticleImage4.png",
-                    Name = "Guiding Your Flock to Success",
-                    Author = "John Doe",
-                    Date = "May 2012",
-                    AverageReadingTime = "5 mins read"
-                },
-                new Model
-                {
-                    ImagePath = App.BaseImageUrl + "ArticleImage5.png",
-                    Name = "Be a Nurturing, Fierce Team Leader",
-                    Author = "John Doe",
-                    Date = "Apr 16",
-                    AverageReadingTime = "5 mins read"
-                },
-                new Model
-                {
-                    ImagePath = App.BaseImageUrl + "ArticleImage6.png",
-                    Name = "Holistic Approach to UI Design",
-                    Author = "John Doe",
-                    Date = "Dec 2013",
-                    AverageReadingTime = "5 mins read"
+                    ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
+                    Name = "Espresso Martini",
+                    Description = "The famous Espresso Martini is a top drink and a classic Kahlua cocktail. Invented by the famous late bartender Dick Bradsell, as a peculiar request from a British top model in his London bar in 1983. The Espresso Martini is a cocktail with a story, a history and a legacy.",
+                    Tag = "Coffee",
+                    Alcohol = 0.15,
+                    Recipe = new Recipe()
+                    {
+                        RecipeList = new List<Ingredient>()
+                        {
+                            new Ingredient(){Name = "Vodka", Quantity = 1.3},
+                            new Ingredient(){Name = "Kahlua", Quantity = 0.66},
+                            new Ingredient(){Name = "Espresso", Quantity = 0.66},
+                            new Ingredient(){Name = "Coffee Beans", Quantity = 3}
+                        }
+                    }
                 }
             };
 
-            this.LatestStories = new ObservableCollection<Model>
+            this.LatestStories = new ObservableCollection<Cocktail>
             {
-                new Model
+
+                new Cocktail
                 {
-                    ImagePath = App.BaseImageUrl + "Article_image1.png",
-                    Name = "Learning to Reset",
-                    Author = "John Doe",
-                    Date = "Apr 16",
-                    AverageReadingTime = "5 mins read"
+                    ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/4416545f-9d35-4c12-9f24-8892d668321b.jpg?imwidth=750",
+                    Name = "French 75",
+                    Description = "The drink was created in 1915 at the New York Bar in Paris - later Harry's New York Bar - by barman Harry MacElhone. The combination was said to have such a kick that it felt like being shelled with the powerful French 75mm field gun, also called a 75 Cocktail, or Soixante Quinze in French. The French 75 was popularized in America at the Stork Club in New York.",
+                    Tag = "Champagne",
+                    Alcohol = 0.13,
+                    Recipe = new Recipe()
+                    {
+                        RecipeList = new List<Ingredient>()
+                        {
+                            new Ingredient(){Name = "Gin", Quantity = 1},
+                            new Ingredient(){Name = "Lemon juice", Quantity = 0.5},
+                            new Ingredient(){Name = "Simple syrup", Quantity = 0.5},
+                            new Ingredient(){Name = "Champgne"},
+                            new Ingredient(){Name = "Lemon Zest"}
+                        }
+                    }
                 },
-                new Model
+                new Cocktail
                 {
-                    ImagePath = App.BaseImageUrl + "Article_image2.png",
-                    Name = "Holistic Approach to UI Design",
-                    Author = "John Doe",
-                    Date = "May 26",
-                    AverageReadingTime = "5 mins read"
-                },
-                new Model
-                {
-                    ImagePath = App.BaseImageUrl + "Article_image3.png",
-                    Name = "Guiding Your Flock to Success",
-                    Author = "John Doe",
-                    Date = "Apr 10",
-                    AverageReadingTime = "5 mins read"
-                },
-                new Model
-                {
-                    ImagePath = App.BaseImageUrl + "Article_image4.png",
-                    Name = "Holistic Approach to UI Design",
-                    Author = "John Doe",
-                    Date = "Apr 16",
-                    AverageReadingTime = "5 mins read"
-                },
+                    ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
+                    Name = "Espresso Martini",
+                    Description = "The famous Espresso Martini is a top drink and a classic Kahlua cocktail. Invented by the famous late bartender Dick Bradsell, as a peculiar request from a British top model in his London bar in 1983. The Espresso Martini is a cocktail with a story, a history and a legacy.",
+                    Tag = "Coffee",
+                    Alcohol = 0.15,
+                    Recipe = new Recipe()
+                    {
+                        RecipeList = new List<Ingredient>()
+                        {
+                            new Ingredient(){Name = "Vodka", Quantity = 1.3},
+                            new Ingredient(){Name = "Kahlua", Quantity = 0.66},
+                            new Ingredient(){Name = "Espresso", Quantity = 0.66},
+                            new Ingredient(){Name = "Coffee Beans", Quantity = 3}
+                        }
+                    }
+                }
             };
 
             this.MenuCommand = new Command(this.MenuClicked);
@@ -116,7 +103,7 @@ namespace CocktailApp.ViewModels.Catalog
         /// <summary>
         /// Gets or sets the property that has been bound with the rotator view, which displays the articles featured stories items.
         /// </summary>
-        public ObservableCollection<Model> FeaturedStories
+        public ObservableCollection<Cocktail> FeaturedStories
         {
             get
             {
@@ -138,7 +125,7 @@ namespace CocktailApp.ViewModels.Catalog
         /// <summary>
         /// Gets or sets the property that has been bound with the list view, which displays the articles latest stories items.
         /// </summary>
-        public ObservableCollection<Model> LatestStories
+        public ObservableCollection<Cocktail> LatestStories
         {
             get
             {
@@ -199,9 +186,9 @@ namespace CocktailApp.ViewModels.Catalog
         /// <param name="obj">The object</param>
         private void BookmarkButtonClicked(object obj)
         {
-            if (obj is Model article)
+            if (obj is Cocktail cocktail)
             {
-                article.IsBookmarked = !article.IsBookmarked;
+                cocktail.IsBookmarked = !cocktail.IsBookmarked;
             }
         }
 

@@ -6,6 +6,7 @@
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
     xmlns:converter="clr-namespace:CocktailApp.Converters"
     x:Name="articleTileTemplate">
+  
 
     <Grid.Resources>
         <ResourceDictionary>
@@ -13,6 +14,7 @@
                 <ResourceDictionary Source="Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <converter:BooleanToStringConverter x:Key="boolToStringConverter" />
+            <converter:ImageSourceConverter x:Key="ImageSourceConverter" />
         </ResourceDictionary>
     </Grid.Resources>
 
@@ -30,23 +32,19 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <!--  Article Image  -->
+        <!--  Cocktail Image  -->
         <Image
             Grid.Row="0"
             Grid.Column="0"
             Grid.ColumnSpan="2"
             Aspect="AspectFill"
             BackgroundColor="{DynamicResource Gray-200}"
-            HeightRequest="120">
-            <Image.Source>
-                <UriImageSource
-                    CacheValidity="14"
-                    CachingEnabled="true"
-                    Uri="{Binding ImagePath}" />
-            </Image.Source>
+            HeightRequest="120"
+            Source="{Binding ImagePath, Converter={StaticResource ImageSourceConverter}}">
+            
         </Image>
 
-        <!--  Label for Article name  -->
+        <!--  Label for Cocktail name  -->
         <Label
             Grid.Row="1"
             Grid.ColumnSpan="2"
@@ -61,7 +59,7 @@
             Text="{Binding Name}"
             TextColor="{DynamicResource Gray-900}" />
 
-        <!--  Label for Article author  -->
+        <!--  Label for thing to think  -->
         <Label
             Grid.Row="2"
             Grid.ColumnSpan="2"
@@ -71,10 +69,10 @@
             HorizontalOptions="Start"
             LineHeight="{OnPlatform Default=-1,
                                     Android=1.25}"
-            Text="{Binding Author}"
+            Text=""
             TextColor="{DynamicResource Gray-900}" />
 
-        <!--  Label for Article date  -->
+        <!--  Label for Cocktail alcholol + tag  -->
         <Label
             Grid.Row="3"
             Margin="0,2,0,8"
@@ -88,9 +86,9 @@
             VerticalTextAlignment="Center">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="{Binding Date}" />
+                    <Span Text="{Binding Alcohol, StringFormat='{0:P0}'}" />
                     <Span Text=" | " />
-                    <Span Text="{Binding AverageReadingTime}" />
+                    <Span Text="{Binding Tag}" />
                 </FormattedString>
             </Label.FormattedText>
         </Label>
