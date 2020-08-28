@@ -20,6 +20,7 @@ namespace CocktailApp.ViewModels.Catalog
 
         private ObservableCollection<Cocktail> latestStories;
 
+        public INavigation Navigation;
         #endregion
 
         #region Constructor
@@ -278,7 +279,8 @@ namespace CocktailApp.ViewModels.Catalog
         /// <param name="obj">The object</param>
         private async void FeatureStoriesClicked(object obj)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new CocktailBookingPage());
+            Cocktail SelectedCocktail = (obj as Cocktail);
+            await Navigation.PushAsync(new CocktailBookingPage(SelectedCocktail));
         }
 
         /// <summary>
@@ -287,7 +289,8 @@ namespace CocktailApp.ViewModels.Catalog
         /// <param name="obj">The Object</param>
         private async void ItemSelected(object obj)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new CocktailBookingPage());
+            var ItemData = (obj as Syncfusion.ListView.XForms.ItemTappedEventArgs).ItemData as Cocktail;
+            await Navigation.PushAsync(new CocktailBookingPage(ItemData));
         }
 
         #endregion

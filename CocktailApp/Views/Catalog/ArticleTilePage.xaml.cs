@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using CocktailApp.ViewModels.Catalog;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
@@ -9,12 +10,16 @@ namespace CocktailApp.Views.Catalog
     /// </summary>
     public partial class ArticleTilePage
     {
+        public ArticleListViewModel viewModel;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ArticleTilePage" /> class.
         /// </summary>
         public ArticleTilePage()
         {
             InitializeComponent();
+            BindingContext = viewModel = new ArticleListViewModel();
+            viewModel.Navigation = Navigation;
         }
 
         /// <summary>

@@ -28,6 +28,8 @@ namespace CocktailApp.ViewModels.CocktailDetail
 
         private int selectedIndex;
 
+        public INavigation Navigation;
+
         #endregion
 
         #region Command
@@ -56,28 +58,6 @@ namespace CocktailApp.ViewModels.CocktailDetail
 
         public CocktailBookingPageViewModel()
         {
-            Cocktail = new Cocktail
-            {
-                ImagePath = "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
-                PreviewImages = new List<string>()
-                {
-                    "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
-                },
-                Name = "Espresso Martini",
-                Description = "The famous Espresso Martini is a top drink and a classic Kahlua cocktail. Invented by the famous late bartender Dick Bradsell, as a peculiar request from a British top model in his London bar in 1983. The Espresso Martini is a cocktail with a story, a history and a legacy.",
-                Tag = "Coffee",
-                Alcohol = 0.15,
-                Recipe = new Recipe()
-                {
-                    RecipeList = new List<Ingredient>()
-                    {
-                        new Ingredient(){Name = "Vodka", Quantity = 1.3},
-                        new Ingredient(){Name = "Kahlua", Quantity = 0.66},
-                        new Ingredient(){Name = "Espresso", Quantity = 0.66},
-                        new Ingredient(){Name = "Coffee Beans", Quantity = 3}
-                    }
-                }
-            };
             this.FavouriteCommand = new Command(this.FavouriteButtonClicked);
         }
 

@@ -16,6 +16,7 @@
              xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
              x:Class="CocktailApp.Views.CocktailDetail.CocktailBookingPage"  
              NavigationPage.HasNavigationBar="True" x:Name="CocktailBooking"
+             Title="{Binding Cocktail.Name}"
              BackgroundColor="{StaticResource Gray-White}">
 
     <ContentPage.BindingContext>
