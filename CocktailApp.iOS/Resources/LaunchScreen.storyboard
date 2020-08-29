@@ -25,8 +25,8 @@
                                     <constraint id="444" firstAttribute="width" constant="204"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borden's Cocktails" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="468" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
-                                <rect key="frame" x="20" y="474" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borden's Cocktails" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="468" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="469" width="374" height="37"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat Medium" pointSize="30"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="0.67843137254901964" green="0.062745098039215685" blue="0.22745098039215686" alpha="1"/>
                                 <nil key="highlightedColor"/>
@@ -36,6 +36,8 @@
                             <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39" constant="-31"/>
                             <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
                             <constraint id="469" firstItem="468" firstAttribute="top" secondItem="23" secondAttribute="bottom" constant="30"/>
+                            <constraint id="879" firstItem="468" firstAttribute="trailing" secondItem="yd7-JS-zBw" secondAttribute="trailingMargin"/>
+                            <constraint id="880" firstItem="468" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin"/>
                         </constraints>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.996078431372549" green="0.996078431372549" blue="0.996078431372549" alpha="1"/>
                     </view>
