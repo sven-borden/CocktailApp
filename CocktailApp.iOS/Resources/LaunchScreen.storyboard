@@ -25,7 +25,7 @@
                                     <constraint id="444" firstAttribute="width" constant="204"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borden Cocktails" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="468" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borden's Cocktails" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="468" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
                                 <rect key="frame" x="20" y="474" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat Medium" pointSize="30"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="0.67843137254901964" green="0.062745098039215685" blue="0.22745098039215686" alpha="1"/>

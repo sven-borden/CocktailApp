@@ -9,6 +9,10 @@
             <ResourceDictionary.MergedDictionaries>
                 <themes:LightTheme />
             </ResourceDictionary.MergedDictionaries >
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#AD103A"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
 
 		<!-- Application resource dictionary -->

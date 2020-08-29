@@ -127,7 +127,15 @@ namespace CocktailApp.ViewModels.Catalog
         {
             await StorageHelper.GetCocktails(false);
 
-            LoadLocalData();
+            try
+            {
+                this.FeaturedStories = new ObservableCollection<Cocktail>(StorageHelper.CocktailsList.Where(c => c.IsFavourite == true));
+                this.LatestStories = new ObservableCollection<Cocktail>(StorageHelper.CocktailsList);
+            }
+            catch (Exception e)
+            {
+                Debug.Print(e.Message);
+            }
         }
         private async void LoadLocalData()
         {

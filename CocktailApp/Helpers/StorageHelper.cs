@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
@@ -14,7 +15,7 @@ namespace CocktailApp.Helpers
 {
     public class StorageHelper
     {
-        public static ObservableCollection<Cocktail> CocktailsList;
+        public static ObservableCollection<Cocktail> CocktailsList = new ObservableCollection<Cocktail>();
         private static string filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "cocktail.txt");
 
         public static void SaveCocktails(List<Cocktail> cocktails)
@@ -42,11 +43,43 @@ namespace CocktailApp.Helpers
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
-                CocktailsList = new ObservableCollection<Cocktail>(JsonConvert.DeserializeObject<List<Cocktail>>(content));
+                var onlineList = JsonConvert.DeserializeObject<List<Cocktail>>(content);
+
+                CocktailsList = new ObservableCollection<Cocktail>(Merge(CocktailsList.ToList(), onlineList));
             }
             else
                 CocktailsList = new ObservableCollection<Cocktail>();
             
+        }
+
+        /// <summary>
+        /// Compare the local list with the online one and merge them with following rules:
+        /// if item is not present on local list, add it,
+        /// if item is not present on online list, remove it,
+        /// if item is present on both list, update values with version number from online list
+        /// </summary>
+        /// <param name="local"></param>
+        /// <param name="online"></param>
+        /// <returns></returns>
+        private static List<Cocktail> Merge(List<Cocktail> local, List<Cocktail> online)
+        {
+            List<Cocktail> MergedList = new List<Cocktail>();
+
+            foreach(Cocktail cocktail in online)
+            {
+                if (local.Any(c => c.ID == cocktail.ID))//exists
+                {
+                    Cocktail LocalCocktail = local.Where(c => c.ID == cocktail.ID).FirstOrDefault();
+                    if (LocalCocktail.Version < cocktail.Version)
+                        MergedList.Add(cocktail);
+                    else
+                        MergedList.Add(LocalCocktail);
+                }
+                else//new one
+                    MergedList.Add(cocktail);
+            }
+
+            return MergedList;
         }
     }
 }
