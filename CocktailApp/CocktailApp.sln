@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CocktailApp", "CocktailApp.csproj", "{A8DDF4A0-6E94-4C30-B5F6-085275F5A0F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailApp", "CocktailApp.csproj", "{A8DDF4A0-6E94-4C30-B5F6-085275F5A0F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailApp.Android", "..\CocktailApp.Android\CocktailApp.Android.csproj", "{17E17954-6286-4E66-BB0C-43BFEC3AB53D}"
 EndProject
