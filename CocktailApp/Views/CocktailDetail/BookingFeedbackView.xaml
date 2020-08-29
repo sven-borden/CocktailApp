@@ -32,7 +32,7 @@
         
     </StackLayout>
 
-    <StackLayout x:Name="StackLayout" BindableLayout.ItemsSource="{Binding Cocktail.Recipe.RecipeList}">
+    <StackLayout x:Name="StackLayout" BindableLayout.ItemsSource="{Binding Cocktail.Recipe}">
         <BindableLayout.ItemTemplate>
             <DataTemplate>
                 <Grid>

@@ -13,19 +13,31 @@
                         <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="appstore.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                                <rect key="frame" x="105" y="235" width="204" height="204"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                <constraints>
+                                    <constraint id="443" firstAttribute="height" constant="204"/>
+                                    <constraint id="444" firstAttribute="width" constant="204"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borden Cocktails" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="468" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                <rect key="frame" x="20" y="474" width="374" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat Medium" pointSize="30"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.67843137254901964" green="0.062745098039215685" blue="0.22745098039215686" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
+                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39" constant="-31"/>
                             <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
+                            <constraint id="469" firstItem="468" firstAttribute="top" secondItem="23" secondAttribute="bottom" constant="30"/>
                         </constraints>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.996078431372549" green="0.996078431372549" blue="0.996078431372549" alpha="1"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -34,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo.png" width="180" height="180"/>
+        <image name="appstore.png" width="1024" height="1024"/>
     </resources>
 </document>

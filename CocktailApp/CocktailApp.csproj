@@ -85,9 +85,6 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
-      <DependentUpon>*.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\CocktailDetail\CocktailBookingPage.xaml.cs">
       <DependentUpon>CocktailBookingPage.xaml</DependentUpon>
     </Compile>

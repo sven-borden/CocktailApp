@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CocktailApp.Models
+﻿namespace CocktailApp.Models
 {
     public class Ingredient
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public double Quantity { get; set; }
     }

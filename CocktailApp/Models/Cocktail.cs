@@ -1,6 +1,8 @@
 ﻿using CocktailApp.ViewModels;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace CocktailApp.Models
@@ -8,6 +10,7 @@ namespace CocktailApp.Models
     /// <summary>
     /// Model for Cocktail templates.
     /// </summary>
+    [JsonObject(MemberSerialization.OptOut)]
     public class Cocktail : BaseViewModel
     {
         #region Fields
@@ -26,54 +29,32 @@ namespace CocktailApp.Models
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets or sets the Cocktail image path.
-        /// </summary>
+        public int ID { get; set; }
+
         public string ImagePath { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Cocktail preview images path</summary>
         public List<string> PreviewImages { get; set; }
 
 
-        /// <summary>
-        /// Gets or sets the Cocktail name.
-        /// </summary>
         public string Name { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Cocktail description
-        /// </summary>
         public string Description { get; set; }
 
-        /// <summary>
-        /// Gets or sets the overall of the cocktail.
-        /// </summary>
+
         public double OverallRating { get; set; }
 
-        /// <summary>
-        /// Gets or sets the reviews of the resort.
-        /// </summary>
         public string TotalReviews { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Cocktail alcohol percentage
-        /// </summary>
+
         public double Alcohol { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Cocktail tag //e.g. sweet, dry
-        /// </summary>
         public string Tag { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Cocktail recipe
-        /// </summary>
-        public Recipe Recipe { get; set; }
+        public List<Ingredient> Recipe { get; set; }
 
-        /// <summary>
-        /// Gets or sets a value indicating whether the Cocktail is bookmarked.
-        /// </summary>
+        public double Version { get; set; }
+
+
         public bool IsBookmarked
         {
             get
@@ -88,9 +69,7 @@ namespace CocktailApp.Models
             }
         }
 
-        /// <summary>
-        /// Gets or sets a value indicating whether the Cocktail is favourite.
-        /// </summary>
+
         public bool IsFavourite
         {
             get
@@ -105,20 +84,6 @@ namespace CocktailApp.Models
             }
         }
 
-        /// <summary>
-        /// Gets or sets the bookmarked count.
-        /// </summary>
-        public int BookmarkedCount { get; set; }
-
-        /// <summary>
-        /// Gets or sets the favourite count.
-        /// </summary>
-        public int FavouritesCount { get; set; }
-
-        /// <summary>
-        /// Gets or sets the shared count.
-        /// </summary>
-        public int SharedCount { get; set; }
 
         #endregion
     }

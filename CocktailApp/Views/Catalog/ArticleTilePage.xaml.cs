@@ -1,4 +1,6 @@
 ﻿using CocktailApp.ViewModels.Catalog;
+using System;
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -17,7 +19,14 @@ namespace CocktailApp.Views.Catalog
         /// </summary>
         public ArticleTilePage()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch(Exception e)
+            {
+                Debug.Print(e.Message);
+            }
             BindingContext = viewModel = new ArticleListViewModel();
             viewModel.Navigation = Navigation;
         }

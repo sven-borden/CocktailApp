@@ -240,9 +240,12 @@
   <ItemGroup>
     <BundleResource Include="Resources\gear.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\appstore.png" />
+  </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadXFormsNugetUpgradeInfoBarCocktailAppiOSHideInfoBar="True" XamarinHotReloadMonoInterpreterErrorInfoBarCocktailAppiOSHideInfoBar="True" />
+      <UserProperties XamarinHotReloadMonoInterpreterErrorInfoBarCocktailAppiOSHideInfoBar="True" XamarinHotReloadXFormsNugetUpgradeInfoBarCocktailAppiOSHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

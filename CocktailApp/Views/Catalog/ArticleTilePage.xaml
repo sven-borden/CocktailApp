@@ -47,7 +47,7 @@
                         BackgroundColor="#FFFFFF}"
                         DotPlacement="Default"
                         DotsBorderColor="Transparent"
-                        EnableLooping="False"
+                        EnableLooping="True"
                         HeightRequest="210"
                         HorizontalOptions="Center"
                         ItemsSource="{Binding FeaturedStories}"
@@ -70,6 +70,7 @@
                                         HorizontalOptions="Start"
                                         Opacity="0.6"
                                         VerticalOptions="Center">
+
                                         <Label
                                             Margin="16"
                                             FontFamily="{StaticResource Montserrat-Bold}"
@@ -77,11 +78,29 @@
                                             LineBreakMode="TailTruncation"
                                             LineHeight="{OnPlatform Default=-1,
                                                                     Android=1.25}"
+                                            Opacity="0"
                                             MaxLines="2"
                                             Text="{Binding Name}"
                                             TextColor="White"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="Center"
                                             WidthRequest="200" />
+
                                     </border:SfBorder>
+
+                                    <Label
+                                        Margin="16"
+                                        FontFamily="{StaticResource Montserrat-Bold}"
+                                        FontSize="20"
+                                        LineBreakMode="TailTruncation"
+                                        LineHeight="{OnPlatform Default=-1,
+                                                                Android=1.25}"
+                                        MaxLines="2"
+                                        Text="{Binding Name}"
+                                        TextColor="White"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        WidthRequest="200" />
 
                                     <Grid.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding BindingContext.FeatureStoriesCommand, Source={x:Reference Rotator}}" CommandParameter="{Binding BindingContext, Source={x:Reference Grid}}" />
