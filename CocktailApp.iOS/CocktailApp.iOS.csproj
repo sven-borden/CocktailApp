@@ -13,7 +13,7 @@
     <AssemblyName>CocktailApp.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <ProvisioningType>manual</ProvisioningType>
+    <ProvisioningType>automatic</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,6 +27,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>Apple Development: Sven Borden (J4DBWP92XJ)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -62,9 +64,14 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>Apple Development: Sven Borden (J4DBWP92XJ)</CodesignKey>
+    <CodesignKey>Apple Distribution: Sven Borden (BENH958VPA)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignProvision>CocktailApp Store Profile</CodesignProvision>
+    <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -249,7 +256,7 @@
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadXFormsNugetUpgradeInfoBarCocktailAppiOSHideInfoBar="True" XamarinHotReloadMonoInterpreterErrorInfoBarCocktailAppiOSHideInfoBar="True" />
+      <UserProperties XamarinHotReloadMonoInterpreterErrorInfoBarCocktailAppiOSHideInfoBar="True" XamarinHotReloadXFormsNugetUpgradeInfoBarCocktailAppiOSHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
