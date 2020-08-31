@@ -5,6 +5,8 @@
   </PropertyGroup>
 
 <ItemGroup>
+<PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.1" />
+<PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.1" />
 <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
 <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.55" />
 <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="18.2.0.55" />

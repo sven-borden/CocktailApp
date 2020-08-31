@@ -12,6 +12,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using SelectionChangedEventArgs = Syncfusion.SfCalendar.XForms.SelectionChangedEventArgs;
 using System.Net.Http.Headers;
+using System.Linq;
+using CocktailApp.Helpers;
 
 namespace CocktailApp.ViewModels.CocktailDetail
 {
@@ -139,18 +141,23 @@ namespace CocktailApp.ViewModels.CocktailDetail
                 return;
             }
 
-            if (button.Text == "\ue701")
+            if (button.Text == "\ue701")//Set as favourite
             {
                 button.Text = "\ue732";
                 Application.Current.Resources.TryGetValue("PrimaryColor", out var retVal);
                 button.TextColor = (Color)retVal;
+                Cocktail.IsFavourite = true;
             }
-            else
+            else // Set as non favourite
             {
                 button.Text = "\ue701";
                 Application.Current.Resources.TryGetValue("Gray-600", out var retVal);
                 button.TextColor = (Color)retVal;
+                Cocktail.IsFavourite = false;
             }
+
+            StorageHelper.CocktailsList.Where(c => c.ID == Cocktail.ID).FirstOrDefault().IsFavourite = Cocktail.IsFavourite;
+            StorageHelper.SaveCocktails(StorageHelper.CocktailsList.ToList());
         }
 
         /// <summary>

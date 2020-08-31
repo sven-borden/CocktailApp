@@ -25,6 +25,7 @@
 
             <converter:BooleanToStringConverter x:Key="BoolToStringConverter" />
             <converter:ImageSourceConverter x:Key="ImageSourceConverter"/>
+            <converter:String2UriConverter x:Key="String2UriConverter" />
 
             <DataTemplate x:Key="HorizontalArticleView">
                 <template:ArticleTileTemplate ParentBindingContext="{Binding Path=BindingContext, Source={x:Reference articleTilePage}}" />
@@ -54,7 +55,9 @@
                         NavigationStripMode="Dots"
                         SelectedDotColor="{DynamicResource PrimaryColor}"
                         UnselectedDotColor="White"
-                        VerticalOptions="Start">
+                        VerticalOptions="Start"
+                        EnableAutoPlay="True"
+                        NavigationDelay="5000">
                         <rotator:SfRotator.ItemTemplate>
                             <DataTemplate>
                                 <Grid x:Name="Grid">
@@ -62,7 +65,11 @@
                                         Aspect="AspectFill"
                                         BackgroundColor="{DynamicResource Gray-200}"
                                         HeightRequest="210"
-                                        Source="{Binding ImagePath, Converter={StaticResource ImageSourceConverter}}" />
+                                        >
+                                        <Image.Source>
+                                            <UriImageSource Uri="{Binding ImagePath, Converter={StaticResource String2UriConverter}}" CachingEnabled="True" CacheValidity="50"/>
+                                        </Image.Source>
+                                    </Image>
 
                                     <border:SfBorder
                                         BackgroundColor="{DynamicResource PrimaryColor}"

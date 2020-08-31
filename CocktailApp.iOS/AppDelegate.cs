@@ -8,6 +8,10 @@ using Syncfusion.XForms.iOS.Border;
 using Syncfusion.XForms.iOS.ParallaxView;
 using System;
 using System.Collections.Generic;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 using System.Linq;
 
 using Foundation;
@@ -43,8 +47,10 @@ namespace CocktailApp.iOS
             SfParallaxViewRenderer.Init();
             
 			SfButtonRenderer.Init();
-			
-			LoadApplication(new App());
+            AppCenter.Start("982cfe2f-ac1f-4aa1-925c-a5bc8fd892a5",
+                   typeof(Analytics), typeof(Crashes));
+
+            LoadApplication(new App());
 
             var result = base.FinishedLaunching(app, options);
 

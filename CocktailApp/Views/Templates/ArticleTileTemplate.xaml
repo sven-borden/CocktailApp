@@ -15,6 +15,8 @@
             </ResourceDictionary.MergedDictionaries>
             <converter:BooleanToStringConverter x:Key="boolToStringConverter" />
             <converter:ImageSourceConverter x:Key="ImageSourceConverter" />
+            <converter:String2UriConverter x:Key="String2UriConverter" />
+
         </ResourceDictionary>
     </Grid.Resources>
 
@@ -40,8 +42,11 @@
             Aspect="AspectFill"
             BackgroundColor="{DynamicResource Gray-200}"
             HeightRequest="120"
-            Source="{Binding ImagePath, Converter={StaticResource ImageSourceConverter}}">
-            
+            >
+            <Image.Source>
+                <UriImageSource Uri="{Binding ImagePath, Converter={StaticResource String2UriConverter}}" CachingEnabled="True" CacheValidity="50"/>
+            </Image.Source>
+
         </Image>
 
         <!--  Label for Cocktail name  -->
@@ -95,18 +100,18 @@
             </Label.FormattedText>
         </Label>
 
-        <!--  Bookmark Button  -->
+        <!--  Favourite Button  -->
         <buttons:SfButton
             Grid.Row="3"
             Grid.Column="1"
             Margin="0"
             Padding="0"
-            Command="{Binding Path=ParentBindingContext.BookmarkCommand, Source={x:Reference articleTileTemplate}}"
+            Command="{Binding Path=ParentBindingContext.FavoriteCommand, Source={x:Reference articleTileTemplate}}"
             CommandParameter="{Binding .}"
             CornerRadius="4"
             FontSize="16"
             Style="{StaticResource NavigationBarButtonStyle}"
-            Text="{Binding IsBookmarked, Converter={StaticResource boolToStringConverter}, ConverterParameter=0}"
+            Text="{Binding IsFavourite, Converter={StaticResource boolToStringConverter}, ConverterParameter=0}"
             WidthRequest="32" />
     </Grid>
 </Grid>

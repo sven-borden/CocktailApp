@@ -16,11 +16,6 @@ namespace CocktailApp.Models
         #region Fields
 
         /// <summary>
-        /// Gets or sets a value indicating whether the Cocktail is bookmarked
-        /// </summary>
-        private bool isBookmarked;
-
-        /// <summary>
         /// Gets or sets a value indicating whether the Cocktail is favourite.
         /// </summary>
         private bool isFavourite;
@@ -55,19 +50,6 @@ namespace CocktailApp.Models
         public double Version { get; set; }
 
 
-        public bool IsBookmarked
-        {
-            get
-            {
-                return this.isBookmarked;
-            }
-
-            set
-            {
-                this.isBookmarked = value;
-                this.NotifyPropertyChanged();
-            }
-        }
 
 
         public bool IsFavourite
@@ -84,7 +66,7 @@ namespace CocktailApp.Models
             }
         }
 
-
+        public string DominantColor { get; set; }
         #endregion
     }
 }

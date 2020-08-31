@@ -29,6 +29,10 @@
                 <ResourceDictionary Source="Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <converter:VisibilityConverter x:Key="VisibilityConverter" />
+            <converter:String2UriConverter x:Key="String2UriConverter" />
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -44,7 +48,7 @@
                     PositionChangedCommandParameter="{Binding Source={x:Reference Rotator}, Path=CurrentItem}"
                     HorizontalOptions="StartAndExpand"
                     ItemsSource="{Binding Cocktail.PreviewImages}"
-                    VerticalOptions="Start">
+                    VerticalOptions="Start" >
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <!--Image of the resort-->
@@ -54,7 +58,7 @@
                                   HeightRequest="350">
                                 <Image.Source>
                                     <UriImageSource
-                                        CacheValidity="14"
+                                        CacheValidity="50"
                                         CachingEnabled="true"
                                         Uri="{Binding .}" />
                                 </Image.Source>

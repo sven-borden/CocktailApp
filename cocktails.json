@@ -22,6 +22,7 @@
         "Quantity": 1.0
     }],
     "Version": 1,
+    "DominantColor" : "64432e",
     "IsBookmarked": false,
     "IsFavourite": false
 }, {
@@ -52,6 +53,7 @@
         "Quantity": 0.0
     }],
     "Version": 1,
+    "DominantColor" : "cfcfaf",
     "IsBookmarked": false,
     "IsFavourite": false
 }, {
@@ -82,8 +84,9 @@
         "Quantity": 1.0
     }],
     "Version": 1,
+    "DominantColor" : "4e5b5d",
     "IsBookmarked": false,
-    "IsFavourite": true
+    "IsFavourite": false
 }, {
     "ID": 3,
     "ImagePath": "https://images.absolutdrinks.com/drink-images/Raw/Absolut/f49cbade-4493-469e-bfde-ef4268f0c0e0.jpg?imwidth=750",
@@ -108,8 +111,9 @@
         "Quantity": 3.0
     }],
     "Version": 1,
+    "DominantColor" : "",
     "IsBookmarked": false,
-    "IsFavourite": true
+    "IsFavourite": false
 }, {
     "ID": 4,
     "ImagePath": "https://static.vinepair.com/wp-content/uploads/2020/04/sidecar_internal.jpg",
@@ -134,8 +138,9 @@
         "Quantity": 1.0
     }],
     "Version": 1,
+    "DominantColor" : "807168",
     "IsBookmarked": false,
-    "IsFavourite": true
+    "IsFavourite": false
 }, {
     "ID": 5,
     "ImagePath": "https://assets.punchdrink.com/wp-content/uploads/2020/03/13102145/Article-Ultimate-Cosmo-Cosmopolitan-Cocktail-Recipe-1000x562.jpg",
@@ -163,8 +168,9 @@
         "Quantity": 1.0
     }],
     "Version": 1,
+    "DominantColor" : "9c7c73",
     "IsBookmarked": false,
-    "IsFavourite": true
+    "IsFavourite": false
 }, {
     "ID": 6,
     "ImagePath": "https://www.bascofinefoods.com/spanish-recipes-wpfiles/wp-content/uploads/2015/02/white_lady_cocktail_recipe-e1505647983286.jpg",
@@ -189,6 +195,7 @@
         "Quantity": 1.0
     }],
     "Version": 1,
+    "DominantColor" : "241911",
     "IsBookmarked": false,
     "IsFavourite": false
 }, {
@@ -218,6 +225,7 @@
         "Quantity": 1.0
     }],
     "Version": 1,
+    "DominantColor" : "252d38",
     "IsBookmarked": false,
     "IsFavourite": false
 }]

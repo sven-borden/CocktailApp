@@ -49,7 +49,9 @@ namespace CocktailApp.Helpers
             }
             else
                 CocktailsList = new ObservableCollection<Cocktail>();
-            
+            SaveCocktails(CocktailsList.ToList());
+
+
         }
 
         /// <summary>
@@ -67,15 +69,18 @@ namespace CocktailApp.Helpers
 
             foreach(Cocktail cocktail in online)
             {
-                if (local.Any(c => c.ID == cocktail.ID))//exists
+                if (local.Any(c => c.ID == cocktail.ID))//exists locally too
                 {
                     Cocktail LocalCocktail = local.Where(c => c.ID == cocktail.ID).FirstOrDefault();
+                    //Need to copy user preferences
+                    cocktail.IsFavourite = LocalCocktail.IsFavourite;
+
                     if (LocalCocktail.Version < cocktail.Version)
                         MergedList.Add(cocktail);
                     else
                         MergedList.Add(LocalCocktail);
                 }
-                else//new one
+                else//new one only from online
                     MergedList.Add(cocktail);
             }
 

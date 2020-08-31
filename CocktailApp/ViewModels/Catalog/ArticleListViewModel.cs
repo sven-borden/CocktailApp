@@ -1,6 +1,7 @@
 ﻿using CocktailApp.Helpers;
 using CocktailApp.Models;
 using CocktailApp.Views.CocktailDetail;
+using Microsoft.AppCenter.Crashes;
 using Syncfusion.DataSource.Extensions;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,7 @@ namespace CocktailApp.ViewModels.Catalog
 
 
             this.MenuCommand = new Command(this.MenuClicked);
-            this.BookmarkCommand = new Command(this.BookmarkButtonClicked);
+            this.FavoriteCommand = new Command(this.FavoriteButtonClicked);
             this.FeatureStoriesCommand = new Command(this.FeatureStoriesClicked);
             this.ItemSelectedCommand = new Command(this.ItemSelected);
             LoadOnlineData();
@@ -105,9 +106,9 @@ namespace CocktailApp.ViewModels.Catalog
         public Command MenuCommand { get; set; }
 
         /// <summary>
-        /// Gets or sets the command that will be executed when the bookmark button is clicked.
+        /// Gets or sets the command that will be executed when the Favorite button is clicked.
         /// </summary>
-        public Command BookmarkCommand { get; set; }
+        public Command FavoriteCommand { get; set; }
 
         /// <summary>
         /// Gets or sets the command that will executed when the feature stories item is clicked.
@@ -134,7 +135,7 @@ namespace CocktailApp.ViewModels.Catalog
             }
             catch (Exception e)
             {
-                Debug.Print(e.Message);
+               Crashes.TrackError(e);
             }
         }
         private async void LoadLocalData()
@@ -147,7 +148,7 @@ namespace CocktailApp.ViewModels.Catalog
             }
             catch (Exception e)
             {
-                Debug.Print(e.Message);
+                Crashes.TrackError(e);
             }
         }
 
@@ -162,15 +163,17 @@ namespace CocktailApp.ViewModels.Catalog
         }
 
         /// <summary>
-        /// Invoked when the bookmark button is clicked.
+        /// Invoked when the favorite button is clicked.
         /// </summary>
         /// <param name="obj">The object</param>
-        private void BookmarkButtonClicked(object obj)
+        private void FavoriteButtonClicked(object obj)
         {
             if (obj is Cocktail cocktail)
             {
-                cocktail.IsBookmarked = !cocktail.IsBookmarked;
+                cocktail.IsFavourite = !cocktail.IsFavourite;
             }
+            StorageHelper.SaveCocktails(StorageHelper.CocktailsList.ToList());
+            this.FeaturedStories = new ObservableCollection<Cocktail>(StorageHelper.CocktailsList.Where(c => c.IsFavourite == true));
         }
 
         /// <summary>
@@ -191,6 +194,8 @@ namespace CocktailApp.ViewModels.Catalog
         {
             var ItemData = (obj as Syncfusion.ListView.XForms.ItemTappedEventArgs).ItemData as Cocktail;
             await Navigation.PushAsync(new CocktailBookingPage(ItemData));
+            Debug.Print("back");
+            this.FeaturedStories = new ObservableCollection<Cocktail>(StorageHelper.CocktailsList.Where(c => c.IsFavourite == true));
         }
 
         #endregion

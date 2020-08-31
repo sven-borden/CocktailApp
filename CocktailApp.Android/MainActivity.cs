@@ -6,6 +6,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 
 namespace CocktailApp.Android
 {
@@ -18,6 +22,10 @@ namespace CocktailApp.Android
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+
+            AppCenter.Start("beebc7a3-1dd5-44c1-ab06-16ea2779dd86",
+                   typeof(Analytics), typeof(Crashes));
+
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());

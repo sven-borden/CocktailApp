@@ -1,6 +1,11 @@
-﻿using CocktailApp.ViewModels.Catalog;
+﻿using CocktailApp.Helpers;
+using CocktailApp.Models;
+using CocktailApp.ViewModels.Catalog;
+using Microsoft.AppCenter.Crashes;
 using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -25,8 +30,9 @@ namespace CocktailApp.Views.Catalog
             }
             catch(Exception e)
             {
-                Debug.Print(e.Message);
+                Crashes.TrackError(e);
             }
+            
             BindingContext = viewModel = new ArticleListViewModel();
             viewModel.Navigation = Navigation;
         }
@@ -49,6 +55,12 @@ namespace CocktailApp.Views.Catalog
                 GridLayout.SpanCount =
                     Device.Idiom == TargetIdiom.Phone ? 2 : Device.Idiom == TargetIdiom.Tablet ? 3 : 4;
             }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            viewModel.FeaturedStories = new ObservableCollection<Cocktail>(StorageHelper.CocktailsList.Where(c => c.IsFavourite == true));
         }
 
         private async void SettingsClicked(object sender, System.EventArgs e)
