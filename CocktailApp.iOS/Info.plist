@@ -35,7 +35,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.glaglasven.CocktailApp</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-60@2x</string>
@@ -61,6 +61,6 @@
 	<key>XSAppIconAssets</key>
 	<string>Media.xcassets/MainAppIcons.appiconset</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1</string>
+	<string>6</string>
 </dict>
 </plist>
