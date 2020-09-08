@@ -2,6 +2,7 @@
 using CocktailApp.Models;
 using CocktailApp.ViewModels.Catalog;
 using Microsoft.AppCenter.Crashes;
+using Syncfusion.SfRotator.XForms;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -27,14 +28,23 @@ namespace CocktailApp.Views.Catalog
             try
             {
                 InitializeComponent();
+                BindingContext = viewModel = new ArticleListViewModel();
+                viewModel.Navigation = Navigation;
+                if (Device.Idiom == TargetIdiom.Phone)
+                {
+                        viewModel.HeaderHeight = 210;
+                }
+                else
+                {
+                        viewModel.HeaderHeight = 450;
+                }
             }
             catch(Exception e)
             {
                 Crashes.TrackError(e);
             }
             
-            BindingContext = viewModel = new ArticleListViewModel();
-            viewModel.Navigation = Navigation;
+            
         }
 
         /// <summary>

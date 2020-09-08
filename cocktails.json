@@ -1,7 +1,7 @@
 [{
     "ID": 0,
     "ImagePath": "https://images.absolutdrinks.com/drink-images/Raw/Absolut/244d2569-6d4f-4b31-acf4-513d6c85113a.jpg?imwidth=750",
-    "PreviewImages": ["https://images.absolutdrinks.com/drink-images/Raw/Absolut/244d2569-6d4f-4b31-acf4-513d6c85113a.jpg?imwidth=750"],
+    "PreviewImages": ["https://images.absolutdrinks.com/drink-images/Raw/Absolut/244d2569-6d4f-4b31-acf4-513d6c85113a.jpg?imwidth=750", "https://www.kuechengoetter.de/uploads/media/960x960/09/17619-martini-cocktail-classic.jpg?v=1-0", "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/2/14/0/FN_Classic-Martini_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371615606531.jpeg"],
     "Name": "Classic Martini",
     "Description": "The martini is a cocktail made with gin or vodka and vermouth, and garnished with an olive or a lemon twist. Over the years, the martini has become one of the best-known mixed alcoholic beverages.",
     "OverallRating": 0.0,
@@ -28,7 +28,7 @@
 }, {
     "ID": 1,
     "ImagePath": "https://images.absolutdrinks.com/drink-images/Raw/Absolut/4416545f-9d35-4c12-9f24-8892d668321b.jpg?imwidth=750",
-    "PreviewImages": ["https://images.absolutdrinks.com/drink-images/Raw/Absolut/4416545f-9d35-4c12-9f24-8892d668321b.jpg?imwidth=750"],
+    "PreviewImages": ["https://images.absolutdrinks.com/drink-images/Raw/Absolut/4416545f-9d35-4c12-9f24-8892d668321b.jpg?imwidth=750", "https://cookieandkate.com/images/2017/12/french-75-recipe-2-3-550x824.jpg", "https://australianbartender.com.au/wp-content/uploads/2017/11/french75_DSC4318.jpg"],
     "Name": "French 75",
     "Description": "The drink was created in 1915 at the New York Bar in Paris - later Harry's New York Bar - by barman Harry MacElhone. The combination was said to have such a kick that it felt like being shelled with the powerful French 75mm field gun, also called a 75 Cocktail, or Soixante Quinze in French. The French 75 was popularized in America at the Stork Club in New York.",
     "OverallRating": 0.0,
@@ -58,8 +58,8 @@
     "IsFavourite": false
 }, {
     "ID": 2,
-    "ImagePath": "http://www.denied-cocktails.com/wp-content/uploads/2017/08/The-Blue-Train-Cocktail_5_1-668x1024.jpg",
-    "PreviewImages": ["http://www.denied-cocktails.com/wp-content/uploads/2017/08/The-Blue-Train-Cocktail_5_1-668x1024.jpg"],
+    "ImagePath": "http://recipes-drinks.ru/coctails/blue-train-cocktail.png",
+    "PreviewImages": ["http://recipes-drinks.ru/coctails/blue-train-cocktail.png", "http://www.denied-cocktails.com/wp-content/uploads/2017/08/The-Blue-Train-Cocktail_5_1-668x1024.jpg"],
     "Name": "Blue Train",
     "Description": "We were surprised to find that this drink probably predates blue curaçao! Famed bartender Harry Craddock used a “blue vegetable extract” along with Cointreau triple sec to create the effect.",
     "OverallRating": 0.0,
@@ -223,6 +223,276 @@
     },{
         "Name": "Lemon Wheel",
         "Quantity": 1.0
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 8,
+    "ImagePath": "https://www.tasteofhome.com/wp-content/uploads/2018/01/White-Russian_EXPS_FT20_37102_F_0610_1_home-696x696.jpg",
+    "PreviewImages": ["https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190816-white-russian-0119-landscape-pf-1568744178.jpg", "https://www.tasteofhome.com/wp-content/uploads/2018/01/White-Russian_EXPS_FT20_37102_F_0610_1_home-696x696.jpg", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190816-white-russian-0099-landscape-pf-1568744178.jpg"],
+    "Name": "White Russian",
+    "Description": "The White Russian is both decadent and easy to make. Combining vodka, Kahlúa and cream and serving it on the rocks create a delicious alternative to adult milkshakes. The White Russian came about in the ’60s when someone added a bit of cream to the Black Russian. It would be a great story to say that the White Russian’s star rose from that point on, but unfortunately that would not be true. The truth is the White Russian suffered a bit from a stodgy, antiquated reputation until the 1998 movie “The Big Lebowski” came along and breathed new life into the cocktail with Jeff Bridges' character, The Dude, sipping it exclusively and somewhat constantly.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.19,
+    "Tag": "Coffee",
+    "Recipe": [{
+        "Name": "Vodka",
+        "Quantity": 2.0
+    }, {
+        "Name": "Kahlua",
+        "Quantity": 1.0
+    }, {
+        "Name": "Splash of Heavy Cream",
+        "Quantity": 1.0
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 9,
+    "ImagePath": "https://cookieandkate.com/images/2019/05/classic-aperol-spritz-recipe-4-768x1154.jpg",
+    "PreviewImages": ["https://cookieandkate.com/images/2019/05/classic-aperol-spritz-recipe-4-768x1154.jpg"],
+    "Name": "Aperol Spritz",
+    "Description": "Aperol spritzes are ultra refreshing, not-too-sweet bubbly cocktails. A proper Aperol spritz tastes like summertime in Italy and looks like a golden orange sunset. I’ll gladly sip one on our front porch now, overlooking our overgrown front yard, and later, with a view of the Italian Riviera.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.05,
+    "Tag": "Italy",
+    "Recipe": [{
+        "Name": "Aperol",
+        "Quantity": 3.0
+    }, {
+        "Name": "Dry Prosecco",
+        "Quantity": 3.0
+    }, {
+        "Name": "Splash Club Soda",
+        "Quantity": 1.0
+    },{
+        "Name": "Orange slice",
+        "Quantity": 1.0
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 10,
+    "ImagePath": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lime-daiquiri-7ac7e81.jpg",
+    "PreviewImages": ["https://images.immediate.co.uk/production/volatile/sites/30/2020/08/lime-daiquiri-7ac7e81.jpg"],
+    "Name": "Daiquiri",
+    "Description": "No drink has suffered more abuse than the Daiquiri. In the roughly 130 years since its inception, the granddaddy of rum cocktails has gone from the pride of Havana to an unloved extra on the back of a Señor Frog’s table tent. Even today, as the craft cocktail movement reaches full tilt, most people too often associate the Daiquiri with adult slushies, the stuff of spring break blackouts and mind-splitting hangovers. But in its purest form, the Daiquiri is simple and sublime, a delicate blend of rum’s sweetness with the raw freshness of sugar and lime juice. Whole lives have been dedicated to balancing the three. That each ingredient should be of the highest quality goes without saying, though even then the Daiquiri can throw you a curve. Choose a too-sweet rum, and you’re sipping liquid candy; overdo the citrus, and the cocktail drowns in a puckering pool of acidity.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.18,
+    "Tag": "Classic",
+    "Recipe": [{
+        "Name": "Light Rum",
+        "Quantity": 2.0
+    }, {
+        "Name": "Lime Juice",
+        "Quantity": 1.0
+    }, {
+        "Name": "Simple Syrup",
+        "Quantity": 0.75
+    },{
+        "Name": "Lime twist",
+        "Quantity": 1.0
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 11,
+    "ImagePath": "https://www.culinaryhill.com/wp-content/uploads/2018/11/whiskey-sour-cocktail-LR-04-Culinary-Hill.jpg",
+    "PreviewImages": ["https://www.culinaryhill.com/wp-content/uploads/2018/11/whiskey-sour-cocktail-LR-04-Culinary-Hill.jpg"],
+    "Name": "Whiskey Sour",
+    "Description": "Spirit, citrus and sugar—the original big three—come together in the Whiskey Sour, whose history stretches back to the Lincoln administration. Few drinks in the cocktail canon are as quick to satisfy and endlessly mutable as the Whiskey Sour. Add a flourish to any component, and you have your own personal spin on this classic sour. We like our Whiskey Sour thickened with egg white and a few dashes of aromatic bitters for a complementary spice note.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.15,
+    "Tag": "Sour",
+    "Recipe": [{
+        "Name": "Whiskey (Bourbon)",
+        "Quantity": 2.0
+    }, {
+        "Name": "Lemon Juice",
+        "Quantity": 0.75
+    }, {
+        "Name": "Simple Syrup",
+        "Quantity": 0.5
+    },{
+        "Name": "(optional) Egg White",
+        "Quantity": 0.5
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 12,
+    "ImagePath": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/MargaritaReal.jpg/800px-MargaritaReal.jpg",
+    "PreviewImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/MargaritaReal.jpg/800px-MargaritaReal.jpg"],
+    "Name": "Margarita",
+    "Description": "The Margarita is one of the most popular cocktails in North America—for good reason. Combining the tang of lime and the sweetness of orange liqueur with the distinctive strength of tequila, our classic Margarita strikes all of the right keys. Although many people reach for premade sour mix, we highly recommend using fresh lime juice. The end result is—let's face it—superior. When talking Margaritas, it’s easy to get lost in stories about who invented the drink or get mired in debates over salt versus no salt; blended or frozen; triple sec, Cointreau or Grand-Marnier.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.3,
+    "Tag": "Classic",
+    "Recipe": [{
+        "Name": "Tequila",
+        "Quantity": 2.0
+    }, {
+        "Name": "Lemon Juice",
+        "Quantity": 1.0
+    }, {
+        "Name": "Cointreau",
+        "Quantity": 0.5
+    },{
+        "Name": "Lime wheel",
+        "Quantity": 1
+    },{
+        "Name": "Salt",
+        "Quantity": 1
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 13,
+    "ImagePath": "https://www.pamperedchef.ca/iceberg/com/recipe/1445550-lg.jpg",
+    "PreviewImages": ["https://www.pamperedchef.ca/iceberg/com/recipe/1445550-lg.jpg"],
+    "Name": "Manhattan",
+    "Description": "The Manhattan was the most famous cocktail in the world shortly after it was invented in New York City’s Manhattan Club, some time around 1880 (as the story goes). Over the years, the whiskey classic has dipped in and out of fashion before finding its footing as one of the cornerstones of the craft cocktail renaissance. Amazingly, the drink that socialites tipped to their lips in the 19th century looks and tastes pretty much the same as the one served today at any decent cocktail bar. The Manhattan’s mix of American whiskey and Italian vermouth, perked up with a few dashes of aromatic bitters, is timeless and tasty—the very definition of what a cocktail should be.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.27,
+    "Tag": "Classic",
+    "Recipe": [{
+        "Name": "Whiskey (Bourbon)",
+        "Quantity": 2.0
+    }, {
+        "Name": "Sweet Vermouth",
+        "Quantity": 1.0
+    }, {
+        "Name": "Agostura Bitters",
+        "Quantity": 2
+    },{
+        "Name": "Orange Bitter",
+        "Quantity": 1
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 14,
+    "ImagePath": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mojito-cocktails-150961e.jpg",
+    "PreviewImages": ["https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mojito-cocktails-150961e.jpg"],
+    "Name": "Mojito",
+    "Description": "To many people, the Mojito represents the perfect rum cocktail. The origins of this classic drink can be traced back to Cuba and the 16th-century Cuban cocktail El Draque, named for Sir Francis Drake. Appropriately, almost all of the ingredients in the Mojito are indigenous to Cuba. Rum, lime, mint and sugar (derived from cane juice) are mixed with soda water to create a refreshing cocktail. The Mojito is traditionally served over ice in a highball glass and often associated with summer. Like your cocktails with literary references? You’re in luck. The Mojito is said to have been a favorite of Ernest Hemingway. While the Mojito is slightly more labor-intensive than other cocktails because it involves muddling the mint, the end result is a delicious, refreshing cocktail that can be enjoyed any time of the year.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.09,
+    "Tag": "Classic",
+    "Recipe": [{
+        "Name": "White Rum",
+        "Quantity": 2.0
+    }, {
+        "Name": "Lime juice",
+        "Quantity": 0.75
+    }, {
+        "Name": "Simple Syrup",
+        "Quantity": 0.5
+    },{
+        "Name": "Mint Leaves",
+        "Quantity": 5
+    },{
+        "Name": "Club soda",
+        "Quantity": 1
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 15,
+    "ImagePath": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tanbackground-1553877785.jpg",
+    "PreviewImages": ["https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tanbackground-1553877785.jpg"],
+    "Name": "Moscow Mule",
+    "Description": "The Moscow Mule practically crackles from its chill. In the dead of winter, it'll cut into the haze of your groggy, tired mind like the edge of a Siberian glacier. In the last humid dregs of summer, the frosty, copper mug will bite at your fingertips. It is a worthy use of vodka. And for all the pomp and circumstance surrounding it—the copper mug, the stirring rod—it's about as simple as a cocktail can be: spirit, mixer, and citrus. Vodka for the bitter bite, ginger beer for a sweet snap, and lime to round out the ensemble. Note that ginger ale is not equal to ginger beer, but what the hell, use in case of emergency. Then, drink your Moscow Mule while debating the extent of geopolitical meddling by our Russian comrades, or while ruminating on anything but politics. Na zdarovje.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.09,
+    "Tag": "Classic",
+    "Recipe": [{
+        "Name": "Vodka",
+        "Quantity": 2.0
+    }, {
+        "Name": "Lime juice",
+        "Quantity": 0.5
+    }, {
+        "Name": "Ginger Beer",
+        "Quantity": 6
+    },{
+        "Name": "Mint Leaves",
+        "Quantity": 1
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 16,
+    "ImagePath": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/gimlet-d8b20bd.jpg",
+    "PreviewImages": ["https://images.immediate.co.uk/production/volatile/sites/30/2020/08/gimlet-d8b20bd.jpg"],
+    "Name": "Gimlet",
+    "Description": "Who says medicine can't taste amazing? This essential cocktail was created for sailors as a way to prevent scurvy. It didn't take long to realize that this preventative drink was also delicious. While scurvy may be of the past, it seems like this tart tipple is here to stay. It doesn't get much simpler or more refreshing than the classic Gimlet.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.09,
+    "Tag": "Classic",
+    "Recipe": [{
+        "Name": "Gin",
+        "Quantity": 2.5
+    }, {
+        "Name": "Lime juice",
+        "Quantity": 0.5
+    }, {
+        "Name": "Simple Syrup",
+        "Quantity": 0.5
+    },{
+        "Name": "Lime Wheel",
+        "Quantity": 1
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
+}, {
+    "ID": 17,
+    "ImagePath": "https://cocktails.lovetoknow.com/image/251455~amaretto-sour.jpg",
+    "PreviewImages": ["https://cocktails.lovetoknow.com/image/251455~amaretto-sour.jpg"],
+    "Name": "Amaretto Sour",
+    "Description": "The Amaretto Sour gets a bad rap. Too often, it’s overly sweet and relies on premade sour mix. We enlisted Portland bartender Jeffrey Morgenthaler to give us his take on the classic Amaretto Sour cocktail. What he came up with is nothing short of magic. This drink turns out frothy, sweet, sour, nutty and strong. Combining amaretto with bourbon, fresh lemon juice, rich simple syrup and egg white creates a perfectly balanced Amaretto Sour.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.09,
+    "Tag": "Sour",
+    "Recipe": [{
+        "Name": "Amaretto",
+        "Quantity": 2.0
+    }, {
+        "Name": "Lemon juice",
+        "Quantity": 1
+    }, {
+        "Name": "(Optional) Egg White",
+        "Quantity": 1
     }],
     "Version": 1,
     "DominantColor" : "252d38",

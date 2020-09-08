@@ -49,7 +49,7 @@
                         DotPlacement="Default"
                         DotsBorderColor="Transparent"
                         EnableLooping="True"
-                        HeightRequest="210"
+                        HeightRequest="{Binding HeaderHeight}"
                         HorizontalOptions="Center"
                         ItemsSource="{Binding FeaturedStories}"
                         NavigationStripMode="Dots"
@@ -57,7 +57,7 @@
                         UnselectedDotColor="White"
                         VerticalOptions="Start"
                         EnableAutoPlay="True"
-                        NavigationDelay="5000">
+                        NavigationDelay="10000">
                         <rotator:SfRotator.ItemTemplate>
                             <DataTemplate>
                                 <Grid x:Name="Grid">

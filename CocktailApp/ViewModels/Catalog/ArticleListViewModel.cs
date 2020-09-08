@@ -25,6 +25,8 @@ namespace CocktailApp.ViewModels.Catalog
 
         private ObservableCollection<Cocktail> latestStories;
 
+        private double headerHeight = 210;
+
         public INavigation Navigation;
         #endregion
 
@@ -53,9 +55,24 @@ namespace CocktailApp.ViewModels.Catalog
         #endregion
 
         #region Public Properties
+
+        public double HeaderHeight
+        {
+            get
+            { 
+                return this.headerHeight;
+            }
+            set
+            {
+                this.headerHeight = value;
+                this.NotifyPropertyChanged();
+            }
+        }
+
         /// <summary>
         /// Gets or sets the property that has been bound with the rotator view, which displays the articles featured stories items.
         /// </summary>
+        /// 
         public ObservableCollection<Cocktail> FeaturedStories
         {
             get

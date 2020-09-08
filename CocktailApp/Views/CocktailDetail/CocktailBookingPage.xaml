@@ -130,7 +130,7 @@
 
                                 <Grid Margin="0,16,0,24" Grid.Row="3" HeightRequest="40" >
 
-                                    <!--  price label -->
+                                    <!--  alcohol label -->
                                     <Label VerticalOptions="Center" HorizontalOptions="Start"
                                     Margin="0" 
                                     FontSize="12"
@@ -142,6 +142,10 @@
                                                 FontFamily="{StaticResource Montserrat-Medium}"
                                                 Text="{Binding Cocktail.Alcohol, StringFormat='{0:P0}'}"
                                                 TextColor="{DynamicResource PrimaryColor}" />
+                                                <Span FontSize="20"
+                                                FontFamily="{StaticResource Montserrat-Medium}"
+                                                Text=" alcohol"
+                                                TextColor="{DynamicResource Gray-600}" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
@@ -150,7 +154,7 @@
                                     <buttons:SfButton x:Name="book"  HeightRequest="35" WidthRequest="80" Margin="0" HorizontalOptions="End" VerticalOptions="Center"
                                             Command="{Binding Path=BindingContext.BookCommand, Source={x:Reference book}}" 
                                             CornerRadius="24" Style="{StaticResource BookNowButtonStyle}"
-                                            Text="BOOK" />
+                                            Text="Get" />
 
                                 </Grid>
 
@@ -162,7 +166,7 @@
                                     TextColor="{DynamicResource Gray-900}" />
 
                                 <!--  cocktail description -->
-                                <Label  Grid.Row="5"  Margin="0,4"
+                                <Label  Grid.Row="5"  Margin="20,20"
                                     FontFamily="{StaticResource Montserrat-Medium}"
                                     FontSize="12"
                                     Style="{StaticResource LabelStyle}"
