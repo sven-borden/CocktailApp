@@ -498,4 +498,43 @@
     "DominantColor" : "252d38",
     "IsBookmarked": false,
     "IsFavourite": false
+}, {
+    "ID": 18,
+    "ImagePath": "https://en.wikipedia.org/wiki/Long_Island_iced_tea#/media/File:Long_Island_Iced_Teas.jpg",
+    "PreviewImages": ["https://en.wikipedia.org/wiki/Long_Island_iced_tea#/media/File:Long_Island_Iced_Teas.jpg"],
+    "Name": "Long island iced tea",
+    "Description": "The Long Island Iced Tea was popularized in the 1970s and remains a beloved drink. It’s possible the cocktail was born out of Prohibition, when thirsty scofflaws wanted to disguise their booze. It’s also possible the drink sprung up in the ’70s at a bar in Long Island, or maybe at a TGI Friday’s. This much is known: You still can’t throw a lemon wedge inside the chain restaurant without knocking one over. On paper, the Long Island Iced Tea is one hot mess of a drink. Four different—and disparate—spirits slugging it out in a single glass, along with triple sec, lemon juice and cola? The recipe reads more like a frat-house hazing ritual than one of the world’s most popular cocktails. And yet, somehow, it works.",
+    "OverallRating": 0.0,
+    "TotalReviews": null,
+    "Alcohol": 0.3,
+    "Tag": "Strong",
+    "Recipe": [{
+        "Name": "Vodka",
+        "Quantity": 0.75
+    }, {
+        "Name" : "White Rum",
+        "Quantity": 0.75
+    } ,{
+        "Name": "Tequila",
+        "Quantity": 0.75
+    }, {
+        "Name": "Gin",
+        "Quantity": 0.75
+    }, {
+        "Name": "Triple Sec",
+        "Quantity": 0.75
+    }, {
+        "Name": "Lemon juice",
+        "Quantity": 0.75
+    }, {
+        "Name": "Cola",
+        "Quantity": 10
+    }, {
+        "Name": "Garnish lemon",
+        "Quantity": 1
+    }],
+    "Version": 1,
+    "DominantColor" : "252d38",
+    "IsBookmarked": false,
+    "IsFavourite": false
 }]
