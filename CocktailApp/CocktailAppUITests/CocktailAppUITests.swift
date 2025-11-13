@@ -2,8 +2,6 @@
 //  CocktailAppUITests.swift
 //  CocktailAppUITests
 //
-//  Created by Sven Borden on 13.11.2025.
-//
 
 import XCTest
 

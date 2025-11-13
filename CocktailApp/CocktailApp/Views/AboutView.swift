@@ -2,8 +2,6 @@
 //  AboutView.swift
 //  CocktailApp
 //
-//  Created by Sven Borden on 13.11.2025.
-//
 
 import SwiftUI
 
@@ -43,23 +41,6 @@ struct AboutView: View {
                     .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 2)
                     .padding(.horizontal, 16)
                     .offset(y: -40)
-
-                    // Our Team Section
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text("Our Team")
-                            .font(.custom("Montserrat-Bold", size: 18))
-                            .foregroundColor(.primary)
-                            .padding(.horizontal, 16)
-
-                        // Team Grid
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))], spacing: 16) {
-                            TeamMemberCard(
-                                name: "Sven Borden",
-                                designation: "Project Manager"
-                            )
-                        }
-                        .padding(.horizontal, 16)
-                    }
                     .padding(.bottom, 32)
                 }
             }
@@ -77,41 +58,6 @@ struct AboutView: View {
                 }
             }
         }
-    }
-}
-
-struct TeamMemberCard: View {
-    let name: String
-    let designation: String
-
-    var body: some View {
-        VStack(spacing: 12) {
-            // Profile Image (using SF Symbol as placeholder)
-            Circle()
-                .fill(Color.primaryLighter)
-                .frame(width: 64, height: 64)
-                .overlay {
-                    Image(systemName: "person.fill")
-                        .font(.system(size: 32))
-                        .foregroundColor(.primaryColor)
-                }
-
-            Text(name)
-                .font(.custom("Montserrat-SemiBold", size: 14))
-                .foregroundColor(.primary)
-
-            Text(designation)
-                .font(.custom("Montserrat-Medium", size: 12))
-                .foregroundColor(.gray600)
-        }
-        .frame(width: 160, height: 160)
-        .background(Color.white)
-        .cornerRadius(Constants.cardCornerRadius)
-        .overlay(
-            RoundedRectangle(cornerRadius: Constants.cardCornerRadius)
-                .stroke(Color.gray200, lineWidth: 1)
-        )
-        .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
     }
 }
 
