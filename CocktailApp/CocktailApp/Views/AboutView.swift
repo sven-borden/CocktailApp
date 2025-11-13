@@ -18,9 +18,11 @@ struct AboutView: View {
                     Color.primaryColor
                         .frame(height: 253)
                         .overlay {
-                            Image(systemName: "wineglass.fill")
-                                .font(.system(size: 80))
-                                .foregroundColor(.white.opacity(0.3))
+                            Image("Logo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150, height: 150)
+                                .opacity(0.9)
                         }
 
                     // About Us Card
