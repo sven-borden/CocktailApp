@@ -1,13 +1,13 @@
 //
-//  Tests_iOSLaunchTests.swift
-//  Tests iOS
+//  CocktailAppUITestsLaunchTests.swift
+//  CocktailAppUITests
 //
-//  Created by Sven Borden 2 on 13.11.21.
+//  Created by Sven Borden on 13.11.2025.
 //
 
 import XCTest
 
-class Tests_iOSLaunchTests: XCTestCase {
+final class CocktailAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
@@ -17,6 +17,7 @@ class Tests_iOSLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()
