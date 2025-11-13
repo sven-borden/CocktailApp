@@ -176,6 +176,14 @@ The app currently uses hardcoded JSON data for development. To add more cocktail
 
 ## Testing
 
+### Device Requirements
+
+For optimal testing and development, you should test on:
+- **Real Device** (recommended for production testing), OR
+- **iPhone 17 Pro Max Simulator** running **iOS 26.1**
+
+### Test Coverage
+
 The app has been tested on:
 - ✅ iPhone 17 Pro Max (iOS 26.1 Simulator)
 - ✅ Portrait orientation
