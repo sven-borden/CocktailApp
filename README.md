@@ -207,11 +207,6 @@ For detailed feature specifications and implementation details, see [COCKTAIL_AP
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Author
-
-**Sven Borden** - Project Manager
-- GitHub: [@sven-borden](https://github.com/sven-borden)
-
 ## Acknowledgments
 
 - Built with SwiftUI and modern iOS development practices
