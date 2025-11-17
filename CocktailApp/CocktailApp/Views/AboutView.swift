@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AboutView: View {
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var userService: UserService
 
     var body: some View {
         NavigationStack {
@@ -43,6 +44,47 @@ struct AboutView: View {
                     .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 2)
                     .padding(.horizontal, 16)
                     .offset(y: -40)
+
+                    // Your Profile Section
+                    if let currentUser = userService.currentUser {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Your Anonymous Profile")
+                                .font(.custom("Montserrat-Bold", size: 16))
+                                .foregroundColor(.primary)
+
+                            HStack(spacing: 12) {
+                                // User Avatar
+                                Circle()
+                                    .fill(Color.primaryLighter)
+                                    .frame(width: 48, height: 48)
+                                    .overlay {
+                                        Image(systemName: "person.fill")
+                                            .font(.system(size: 24))
+                                            .foregroundColor(.primaryColor)
+                                    }
+
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(currentUser.displayName)
+                                        .font(.custom("Montserrat-SemiBold", size: 16))
+                                        .foregroundColor(.primary)
+
+                                    Text("Anonymous User")
+                                        .font(.custom("Montserrat-Medium", size: 12))
+                                        .foregroundColor(.gray600)
+                                }
+
+                                Spacer()
+                            }
+                        }
+                        .padding(16)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.white)
+                        .cornerRadius(Constants.cardCornerRadius)
+                        .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 2)
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 24)
+                        .offset(y: -20)
+                    }
 
                     // Our Team Section
                     VStack(alignment: .leading, spacing: 16) {
